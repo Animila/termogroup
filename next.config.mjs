@@ -1,7 +1,9 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-    basePath: "/termogroup",
     reactStrictMode: true,
+    output: 'export',
+    basePath: process.env.NODE_ENV === 'production' ? '/имя-вашего-репозитория' : '',
+    trailingSlash: true,
 };
 
 export default nextConfig;

@@ -2,7 +2,7 @@
 const nextConfig = {
     reactStrictMode: true,
     output: 'export',
-    basePath: process.env.NODE_ENV === 'production' ? '/имя-вашего-репозитория' : '',
+    basePath: process.env.NODE_ENV === 'production' ? '/termogroup' : '',
     trailingSlash: true,
 };
 

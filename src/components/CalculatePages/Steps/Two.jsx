@@ -2,7 +2,7 @@ import {useEffect, useState} from "react";
 import {NextSVG} from "../../../../public/icons/NextSVG";
 import SelectSVG from "../../../../public/icons/SelectSVG";
 
-const TwoPageCalculate = ({setStep, register, watch, setValue}) => {
+export const TwoPageCalculate = ({setStep, register, watch, setValue}) => {
   const [active, setActive] = useState(false)
 
   useEffect(() => {
@@ -63,5 +63,3 @@ const TwoPageCalculate = ({setStep, register, watch, setValue}) => {
   </div>
 </div>
 }
-
-export default TwoPageCalculate

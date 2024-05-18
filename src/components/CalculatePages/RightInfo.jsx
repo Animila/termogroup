@@ -1,6 +1,6 @@
 import Image from "next/image";
 
-const RightInfo = () => {
+export const RightInfo = () => {
   return <div className="flex flex-col items-center text-white relative">
     <div className="mb-4 relative z-[1]">
       <div className='flex justify-center items-center z-0'>
@@ -37,5 +37,3 @@ const RightInfo = () => {
     </div>
   </div>
 }
-
-export default RightInfo

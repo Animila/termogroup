@@ -7,7 +7,7 @@ import {NextSVG} from "../../../../public/icons/NextSVG";
 import {useEffect, useState} from "react";
 import InputMask from 'react-input-mask';
 
-const EndPageCalculate = ({setStep, register, watch, setValue}) => {
+export const EndPageCalculate = ({setStep, register, watch, setValue}) => {
   const [active, setActive] = useState(false)
 
   useEffect(() => {
@@ -73,5 +73,3 @@ const EndPageCalculate = ({setStep, register, watch, setValue}) => {
 
   </div>
 }
-
-export default EndPageCalculate

@@ -45,5 +45,3 @@ export const SpecialOffers = () => {
         </div>
     );
 };
-
-export default SpecialOffers;

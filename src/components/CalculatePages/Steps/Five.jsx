@@ -2,7 +2,7 @@ import SelectSVG from "../../../../public/icons/SelectSVG";
 import {NextSVG} from "../../../../public/icons/NextSVG";
 import {useEffect, useState} from "react";
 
-const FivePageCalculate = ({setStep, register, watch, setValue}) => {
+export const FivePageCalculate = ({setStep, register, watch, setValue}) => {
   const [active, setActive] = useState(false)
 
   useEffect(() => {
@@ -45,5 +45,3 @@ const FivePageCalculate = ({setStep, register, watch, setValue}) => {
     </div>
   </div>
 }
-
-export default FivePageCalculate

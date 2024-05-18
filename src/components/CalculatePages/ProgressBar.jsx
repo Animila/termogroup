@@ -1,6 +1,6 @@
 import {useEffect, useRef} from "react";
 
-const ProgressBar = ({step}) => {
+export const ProgressBar = ({step}) => {
 
     const listRef = useRef(null);
     const progressBarRef = useRef(null);
@@ -52,5 +52,3 @@ const ProgressBar = ({step}) => {
         <div ref={progressBarRef} className={`h-[2px] z-0 absolute top-[50%] bg-main_one`}></div>
     </div>
 }
-
-export default ProgressBar

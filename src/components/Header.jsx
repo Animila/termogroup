@@ -1,6 +1,6 @@
 import {PlaySVG} from "../../public/icons/PlaySVG";
 import Image from "next/image";
-const HeaderSection = ({setActiveVideo}) => {
+export const HeaderSection = ({setActiveVideo}) => {
   return <section className="sm:px-[10px] sm:mt-[20px] md:px-[100px] pb-[200px] md:mt-[100px] block bg-white relative">
     <div className="absolute
                     lg:right-[20px]
@@ -56,5 +56,3 @@ const HeaderSection = ({setActiveVideo}) => {
     </div>
   </section>
 }
-
-export default HeaderSection

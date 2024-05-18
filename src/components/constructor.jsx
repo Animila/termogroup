@@ -1,5 +1,4 @@
 import Image from "next/image";
-import {Span} from "next/dist/server/lib/trace/tracer";
 import {useState} from "react";
 import {NextSVG} from "../../public/icons/NextSVG";
 

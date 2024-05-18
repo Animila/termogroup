@@ -1,13 +1,11 @@
 import React, {useEffect, useState} from 'react';
 import Image from "next/image";
-import {PeopleSVG} from "../../public/icons/PeopleSVG";
 import {PhoneSVG} from "../../public/icons/PhoneSVG";
 import InputMask from "react-input-mask";
 import {EmailSVG} from "../../public/icons/EmailSVG";
-import {NextSVG} from "../../public/icons/NextSVG";
 import {useForm} from "react-hook-form";
 
-const Contacts = () => {
+export const Contacts = () => {
     const {
         register,
         handleSubmit,
@@ -98,5 +96,3 @@ const Contacts = () => {
         </div>
     );
 };
-
-export default Contacts;

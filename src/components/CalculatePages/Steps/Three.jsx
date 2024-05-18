@@ -1,7 +1,7 @@
 import {NextSVG} from "../../../../public/icons/NextSVG";
 import {useEffect, useState} from "react";
 
-const ThreePageCalculate = ({setStep, register, watch}) => {
+export const ThreePageCalculate = ({setStep, register, watch}) => {
   const [active, setActive] = useState(false)
 
   useEffect(() => {
@@ -37,5 +37,3 @@ const ThreePageCalculate = ({setStep, register, watch}) => {
     </div>
   </div>
 }
-
-export default ThreePageCalculate

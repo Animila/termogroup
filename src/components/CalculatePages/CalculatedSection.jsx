@@ -1,15 +1,15 @@
 'use client'
 
 import {useState} from "react";
-import TwoPageCalculate from "@/components/CalculatePages/Steps/Two";
-import ThreePageCalculate from "@/components/CalculatePages/Steps/Three";
-import FourPageCalculate from "@/components/CalculatePages/Steps/Four";
-import FivePageCalculate from "@/components/CalculatePages/Steps/Five";
-import EndPageCalculate from "@/components/CalculatePages/Steps/End";
 import OnePageCalculate from "@/components/CalculatePages/Steps/One";
 import { useForm } from "react-hook-form"
-import ProgressBar from "@/components/CalculatePages/ProgressBar";
-import RightInfo from "@/components/CalculatePages/RightInfo";
+import {RightInfo} from "@/components/CalculatePages/RightInfo";
+import {ProgressBar} from "@/components/CalculatePages/ProgressBar";
+import {TwoPageCalculate} from "@/components/CalculatePages/Steps/Two";
+import {ThreePageCalculate} from "@/components/CalculatePages/Steps/Three";
+import {FourPageCalculate} from "@/components/CalculatePages/Steps/Four";
+import {FivePageCalculate} from "@/components/CalculatePages/Steps/Five";
+import {EndPageCalculate} from "@/components/CalculatePages/Steps/End";
 
 export const CalculatedSection = () => {
   const [step, setStep] = useState(1)

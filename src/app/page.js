@@ -9,6 +9,7 @@ import {Projects} from "@/components/Projects";
 import {SpecialOffers} from "@/components/Offers";
 import {Faq} from "@/components/Faq";
 import {Contacts} from "@/components/Contacts";
+import {useState} from "react";
 
 export default function Home() {
     const [activeVideo, setActiveVideo] = useState(false)

@@ -10,11 +10,14 @@
     "prod": "next build && next start -p 3000"
   },
   "dependencies": {
+    "cookie": "^0.6.0",
+    "jsonwebtoken": "^9.0.2",
     "next": "14.2.3",
     "react": "^18",
     "react-dom": "^18",
     "react-hook-form": "^7.51.3",
-    "react-input-mask": "^2.0.4"
+    "react-input-mask": "^2.0.4",
+    "sharp": "^0.33.4"
   },
   "devDependencies": {
     "postcss": "^8",

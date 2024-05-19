@@ -1,16 +1,5 @@
-import Image from 'next/image';
-
-const offers = [
-
-    {
-        title: 'Зимняя скидка -7%',
-        description: 'Бесплатное хранение на складе до весны',
-        duration: '23.11.24 - 28.02.25',
-        linkText: 'Подробнее',
-        bgColor: 'bg-orange-500'
-    }
-];
-
+import offers from '../data/offers.json'
+import {useEffect} from "react";
 export const SpecialOffers = () => {
     return (
         <div className='mt-[65px] md:px-[160px] sm:px-[10px]'>
@@ -22,7 +11,7 @@ export const SpecialOffers = () => {
             </div>
             <div className='grid sm:grid-cols-1 md:grid-cols-12 gap-4'>
                 {offers.map((offer, index) => (
-                    <div key={index} className={`relative w-full md:col-span-6 sm:col-span-1 p-4 rounded-lg ${offer.bgColor} text-white`}>
+                    <div key={index} className={`relative w-full md:col-span-6 bg-orange-500 sm:col-span-1 p-4 rounded-lg text-white`} style={{background: offer.bgColor}}>
                         <div className='absolute inset-0 bg-opacity-50'>
                             {/*<Image src={offer.image} alt={offer.title} layout='fill' objectFit='cover' />*/}
                         </div>

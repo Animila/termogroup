@@ -1,6 +1,6 @@
-import SelectSVG from "../../../../public/icons/SelectSVG";
 import {NextSVG} from "../../../../public/icons/NextSVG";
 import {useEffect, useState} from "react";
+import { motion } from "framer-motion";
 
 export const FivePageCalculate = ({setStep, register, watch, setValue}) => {
   const [active, setActive] = useState(false)
@@ -8,7 +8,15 @@ export const FivePageCalculate = ({setStep, register, watch, setValue}) => {
   useEffect(() => {
     setActive(watch('check') != null && watch('check').trim() !== '')
   }, [watch('check')])
-  return <div className="mt-[50px] flex flex-col gap-[20px]">
+  return <motion.div
+      className="mt-[50px] flex flex-col gap-[20px]"
+      initial="hidden"
+      animate="visible"
+      variants={{
+        hidden: {opacity: 0, y: 50},
+        visible: {opacity: 1, y: 0, transition: {duration: 0.5}}
+      }}
+  >
     <div className="flex flex-col gap-[20px]">
       <p className="text-white text-[30px] leading-[32px]">Толщина утеплителя?</p>
       <span className="text-white text-[17px] leading-[18px]">Выберите толщину утеплителя</span>
@@ -23,7 +31,7 @@ export const FivePageCalculate = ({setStep, register, watch, setValue}) => {
         </label>
       </div>
     </div>
-    <div className="flex flex-row gap-[20px] self-end">
+    <div className="flex flex-row md:gap-[20px] self-end">
       <button
           className="bg-gray text-white w-[170px] h-[50px] flex justify-center items-center gap-[15px] self-end rounded-3xl"
           onClick={(e) => {
@@ -43,5 +51,5 @@ export const FivePageCalculate = ({setStep, register, watch, setValue}) => {
         <NextSVG color={active ? 'white' : '#747F80'}/>
       </button>
     </div>
-  </div>
+  </motion.div>
 }

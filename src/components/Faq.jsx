@@ -1,7 +1,9 @@
 'use client'
-import {useState} from "react";
+import { useState } from "react";
 import Image from "next/image";
-import {NextSVG} from "../../public/icons/NextSVG";
+import { NextSVG } from "../../public/icons/NextSVG";
+import { motion } from "framer-motion";
+import { useInView } from "@/hooks/useInView";
 
 export const Faq = () => {
     const questions = [
@@ -41,9 +43,9 @@ export const Faq = () => {
             "question": "Как ремонтировать термопанели?",
             "answer": "Поврежденные термопанели ремонтируются без необходимости демонтажа тем же армирующим составом, которым покрыты панели"
         }
-    ]
+    ];
 
-    const [selectedQuestionIndex, setSelectedQuestionIndex] = useState(null)
+    const [selectedQuestionIndex, setSelectedQuestionIndex] = useState(null);
 
     const handleQuestionClick = (index) => {
         setSelectedQuestionIndex(index);
@@ -53,98 +55,140 @@ export const Faq = () => {
         setSelectedQuestionIndex(null);
     };
 
-    return <div className="sm:px-[10px] md:px-[170px] ">
-        <h2 className="sm:text-[40px] sm:text-center sm:leading-[35px]  md:text-[78px] md:leading-[74px] my-[60px]">Частые вопросы</h2>
-        <div className="grid sm:grid-cols-1 md:grid-cols-3 gap-[32px]">
-            {questions.map((item, index) =>
-                <div key={index}>
-                    <div className="bg-accent_two rounded-br-[40px] rounded-tr-[40px] rounded-tl-[40px] rounded-bl-0 px-[45px] py-[22px] h-[118px] flex justify-center items-center text-[18px] leading-[24px]">{item.question}</div>
-                    <button onClick={() => handleQuestionClick(index)} className="bg-main_three rounded-br-[40px] rounded-tr-[40px] rounded-tl-[40px] rounded-bl-0 px-[40px] py-[18px] w-fit text-white text-[18px] leading-[22px] mt-[8px]">Ответ</button>
+    return (
+        <div className="sm:px-[10px] md:px-[170px] ">
+            <h2 className="sm:text-[40px] sm:text-center sm:leading-[35px]  md:text-[78px] md:leading-[74px] my-[60px]">Частые вопросы</h2>
+            <div className="grid sm:grid-cols-1 md:grid-cols-3 gap-[32px]">
+                {questions.map((item, index) => {
+                    const [ref, isInView] = useInView({ threshold: 0.1 });
+                    return (
+                        <motion.div
+                            ref={ref}
+                            key={index}
+                            initial="hidden"
+                            animate={isInView ? "visible" : "hidden"}
+                            variants={{
+                                hidden: { opacity: 0, y: 50 },
+                                visible: { opacity: 1, y: 0, transition: { duration: 0.5 } }
+                            }}
+                            className='flex flex-col items-center'
+                        >
+                            <div className="bg-accent_two rounded-br-[40px] rounded-tr-[40px] rounded-tl-[40px] rounded-bl-0 px-[45px] py-[22px] h-[118px] flex justify-center items-center text-[18px] leading-[24px]">
+                                {item.question}
+                            </div>
+                            <button
+                                onClick={() => handleQuestionClick(index)}
+                                className="bg-main_three rounded-br-[40px] rounded-tr-[40px] rounded-tl-[40px] rounded-bl-0 px-[40px] py-[18px] w-fit text-white text-[18px] leading-[22px] mt-[8px]"
+                            >
+                                Ответ
+                            </button>
+                        </motion.div>
+                    );
+                })}
+            </div>
+
+            {selectedQuestionIndex !== null && (
+                <div
+                    id="default-modal"
+                    tabIndex="-1"
+                    aria-hidden="true"
+                    className="fixed top-0 left-0 z-50 flex justify-center items-center w-full md:inset-0 sm:h-full max-h-full bg-black bg-opacity-40 cursor-pointer"
+                    onClick={(e) => {
+                        e.stopPropagation();
+                        e.preventDefault();
+                        handleCloseModal();
+                    }}
+                >
+                    <div
+                        className="relative md:max-w-[60%] sm:overflow-y-scroll sm:h-full sm:max-w-[100%] md:h-[80%] sm:max-h-[100%] bg-white sm:px-[10px] md:px-[57px] cursor-auto md:py-[60px] sm:py-[20px]"
+                        onClick={(e) => e.stopPropagation()}
+                    >
+                        <div
+                            onClick={() => handleCloseModal()}
+                            className="absolute sm:top-[16px] sm:right-[16px] md:top-[-20px] md:right-[-20px] md:bg-white md:rounded-full md:w-[44px] md:h-[44px] flex justify-center items-center md:border-[1px] md:border-accent_two cursor-pointer"
+                        >
+                            <Image src={'/images/close-icon.png'} width={16} height={16} alt={"close"} />
+                        </div>
+                        <div className="flex flex-col md:gap-[40px] sm:gap-[20px]">
+                            <div>
+                                <span className="text-accent_one text-[18px] font-bold">Вопрос</span>
+                                <h3 className="text-[32px] font-bold mt-[20px]">
+                                    {questions[selectedQuestionIndex].question}
+                                </h3>
+                            </div>
+                            <div>
+                                <span className="text-main_one text-[18px] font-bold">Ответ</span>
+                                <p className="text-[18px] leading-[27px] mt-[20px]">
+                                    {questions[selectedQuestionIndex].answer}
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div
+                        className={`sm:hidden absolute right-[-50%] md:max-w-[60%] sm:h-full sm:max-w-[100%] md:h-[80%] sm:max-h-[100%] bg-white sm:px-[10px] md:px-[57px] cursor-auto md:py-[60px] sm:py-[20px] ${selectedQuestionIndex < questions.length - 1 ? 'block' : 'hidden'}`}
+                        onClick={(e) => e.stopPropagation()}
+                    >
+                        <div className="flex flex-col md:gap-[40px] sm:gap-[20px]">
+                            <div>
+                                <span className="text-accent_one text-[18px] font-bold">Вопрос</span>
+                                <h3 className="text-[32px] font-bold mt-[20px]">
+                                    {selectedQuestionIndex < questions.length - 1 ? questions[selectedQuestionIndex + 1].question : ''}
+                                </h3>
+                            </div>
+                            <div>
+                                <span className="text-main_one text-[18px] font-bold">Ответ</span>
+                                <p className="text-[18px] leading-[27px] mt-[20px]">
+                                    {selectedQuestionIndex < questions.length - 1 ? questions[selectedQuestionIndex + 1].answer : ''}
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div
+                        className={`sm:hidden absolute left-[-50%] md:max-w-[60%] sm:h-full sm:max-w-[100%] md:h-[80%] sm:max-h-[100%] bg-white sm:px-[10px] md:px-[57px] cursor-auto md:py-[60px] sm:py-[20px] ${selectedQuestionIndex > 0 ? 'block' : 'hidden'}`}
+                        onClick={(e) => e.stopPropagation()}
+                    >
+                        <div className="flex flex-col md:gap-[40px] sm:gap-[20px]">
+                            <div>
+                                <span className="text-accent_one text-[18px] font-bold">Вопрос</span>
+                                <h3 className="text-[32px] font-bold mt-[20px]">
+                                    {selectedQuestionIndex > 0 ? questions[selectedQuestionIndex - 1].question : ''}
+                                </h3>
+                            </div>
+                            <div>
+                                <span className="text-main_one text-[18px] font-bold">Ответ</span>
+                                <p className="text-[18px] leading-[27px] mt-[20px]">
+                                    {selectedQuestionIndex > 0 ? questions[selectedQuestionIndex - 1].answer : ''}
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <button
+                        onClick={(e) => {
+                            if (selectedQuestionIndex > 0) {
+                                setSelectedQuestionIndex(prev => prev - 1);
+                            }
+                            e.stopPropagation();
+                        }}
+                        className={`z-10 absolute sm:bottom-[10px] md:top-[50%] sm:left-[10px] md:left-28 ${selectedQuestionIndex === 0 ? 'bg-gray' : 'bg-main_one'} h-[60px] w-[60px] rounded-full flex justify-center items-center`}
+                    >
+                        <NextSVG rotate={true} color={selectedQuestionIndex === 0 ? "gray" : "white"} />
+                    </button>
+                    <button
+                        onClick={(e) => {
+                            if (selectedQuestionIndex < questions.length - 1) {
+                                setSelectedQuestionIndex(prev => prev + 1);
+                            }
+                            e.stopPropagation();
+                        }}
+                        className={`z-10 absolute sm:bottom-[10px] md:top-[50%] sm:right-[10px] md:right-28 ${selectedQuestionIndex === questions.length - 1 ? 'bg-gray' : 'bg-main_one'} h-[60px] w-[60px] rounded-full flex justify-center items-center`}
+                    >
+                        <NextSVG color={selectedQuestionIndex === questions.length - 1 ? "gray" : "white"} />
+                    </button>
                 </div>
             )}
         </div>
-
-        {selectedQuestionIndex !== null && (
-            <div
-                id="default-modal"
-                tabIndex="-1"
-                aria-hidden="true"
-                className="fixed top-0 left-0 z-50 flex justify-center items-center w-full md:inset-0 sm:h-full max-h-full bg-black bg-opacity-40 cursor-pointer"
-                onClick={(e) => {
-                    e.stopPropagation()
-                    e.preventDefault()
-                    handleCloseModal()
-                }}
-            >
-                <div
-                    className="relative md:max-w-[60%] sm:overflow-y-scroll sm:h-full sm:max-w-[100%] md:h-[80%] sm:max-h-[100%] bg-white sm:px-[10px] md:px-[57px] cursor-auto md:py-[60px] sm:py-[20px]"
-                    onClick={(e) => e.stopPropagation()}>
-                    <div onClick={() => handleCloseModal()}
-                         className="absolute sm:top-[16px] sm:right-[16px] md:top-[-20px] md:right-[-20px] md:bg-white md:rounded-full md:w-[44px] md:h-[44px] flex justify-center items-center md:border-[1px] md:border-accent_two cursor-pointer">
-                        <Image src={'/images/close-icon.png'} width={16} height={16} alt={"close"}/>
-                    </div>
-                    <div className="flex flex-col md:gap-[40px] sm:gap-[20px]">
-                        <div>
-                            <span className="text-accent_one text-[18px] font-bold">Вопрос</span>
-                            <h3 className="text-[32px] font-bold mt-[20px]">{questions[selectedQuestionIndex].question}</h3>
-                        </div>
-                        <div>
-                            <span className="text-main_one text-[18px] font-bold">Ответ</span>
-                            <p className="text-[18px] leading-[27px] mt-[20px]">{questions[selectedQuestionIndex].answer}</p>
-                        </div>
-                    </div>
-                </div>
-
-                <div
-                    className={`sm:hidden absolute right-[-50%] md:max-w-[60%] sm:h-full sm:max-w-[100%] md:h-[80%] sm:max-h-[100%] bg-white sm:px-[10px] md:px-[57px] cursor-auto md:py-[60px] sm:py-[20px] ${selectedQuestionIndex < questions.length - 1 ? 'block' : 'hidden'}`}
-                    onClick={(e) => e.stopPropagation()}>
-
-                    <div className="flex flex-col md:gap-[40px] sm:gap-[20px]">
-                        <div>
-                            <span className="text-accent_one text-[18px] font-bold">Вопрос</span>
-                            <h3 className="text-[32px] font-bold mt-[20px]">{selectedQuestionIndex < questions.length - 1 ? questions[selectedQuestionIndex + 1].question : ''}</h3>
-                        </div>
-                        <div>
-                            <span className="text-main_one text-[18px] font-bold">Ответ</span>
-                            <p className="text-[18px] leading-[27px] mt-[20px]">{selectedQuestionIndex < questions.length - 1 ? questions[selectedQuestionIndex + 1].answer : ''}</p>
-                        </div>
-                    </div>
-                </div>
-
-                <div
-                    className={`sm:hidden absolute left-[-50%] md:max-w-[60%] sm:h-full sm:max-w-[100%] md:h-[80%] sm:max-h-[100%] bg-white sm:px-[10px] md:px-[57px] cursor-auto md:py-[60px] sm:py-[20px] ${selectedQuestionIndex > 0 ? 'block' : 'hidden'}`}
-                    onClick={(e) => e.stopPropagation()}>
-                    <div className="flex flex-col md:gap-[40px] sm:gap-[20px]">
-                        <div>
-                            <span className="text-accent_one text-[18px] font-bold">Вопрос</span>
-                            <h3 className="text-[32px] font-bold mt-[20px]">{selectedQuestionIndex > 0 ? questions[selectedQuestionIndex - 1].question : ''}</h3>
-                        </div>
-                        <div>
-                            <span className="text-main_one text-[18px] font-bold">Ответ</span>
-                            <p className="text-[18px] leading-[27px] mt-[20px]">{selectedQuestionIndex > 0 ? questions[selectedQuestionIndex - 1].answer : ''}</p>
-                        </div>
-                    </div>
-                </div>
-
-                <button onClick={(e) => {
-                    if (selectedQuestionIndex > 0) {
-                        setSelectedQuestionIndex(prev => prev - 1)
-                    }
-                    e.stopPropagation()
-                }}
-                        className={`z-10 absolute sm:bottom-[10px] md:top-[50%] sm:left-[10px] md:left-28 ${selectedQuestionIndex === 0 ? 'bg-gray' : 'bg-main_one'} h-[60px] w-[60px] rounded-full flex justify-center items-center`}>
-                    <NextSVG rotate={true} color={selectedQuestionIndex === 0 ? "gray" : "white"}/>
-                </button>
-                <button onClick={(e) => {
-                    if (selectedQuestionIndex < questions.length - 1) {
-                        setSelectedQuestionIndex(prev => prev + 1)
-                    }
-                    e.stopPropagation()
-                }}
-                        className={`z-10 absolute sm:bottom-[10px] md:top-[50%] sm:right-[10px] md:right-28 ${selectedQuestionIndex === questions.length - 1 ? 'bg-gray' : 'bg-main_one'} h-[60px] w-[60px] rounded-full flex justify-center items-center`}>
-                    <NextSVG color={selectedQuestionIndex === questions.length - 1 ? "gray" : "white"}/>
-                </button>
-            </div>
-        )}
-    </div>
-}
+    );
+};

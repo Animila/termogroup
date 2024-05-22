@@ -88,7 +88,7 @@ export const Contacts = () => {
                     </div>
                     <div className="flex flex-row items-center mt-[53px]">
                         <PhoneSVG color={'#F22F05'}/>
-                        <a href="tel:+87772096800" className="ml-[10px] sm:text-[17px] md:text-[22px]">+8 777 209 68
+                        <a href="tel:+77772096800" className="ml-[10px] sm:text-[17px] md:text-[22px]">+7 777 209 68
                             00</a>
                     </div>
                 </div>

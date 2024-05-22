@@ -64,8 +64,8 @@ export const Projects = () => {
                                    objectFit="cover"/>
                         </div>
                         <div className='p-4'>
-                            <div className='text-[16px] leading-[19px]'>Фасад</div>
-                            <div className='text-[24px] leading-[28px]'>{item.type.sm} м²</div>
+                            <div className='text-[16px] leading-[19px]'>Утепление</div>
+                            <div className='text-[24px] leading-[28px]'>{item.type.sm} см²</div>
                             <div className='text-[16px] leading-[19px]'>Цена за м²</div>
                             <div className='text-[24px] leading-[28px]'>{item.type.price}</div>
                             <div className='text-[16px] leading-[19px] mt-4'>Итоговая цена</div>

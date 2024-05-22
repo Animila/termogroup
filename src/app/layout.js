@@ -2,6 +2,7 @@ import { Inter } from "next/font/google";
 import "./globals.css";
 import {Footer} from "@/components/Footer";
 import {Menu} from "@/components/Menu";
+import {ModalProvider} from "@/contexts/ModalContext";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -12,13 +13,16 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="ru">
-      <body className={`${inter.className} relative`}>
+      <ModalProvider>
+        <html lang="ru">
+        <body className={`${inter.className} relative`}>
 
-      <Menu />
+        <Menu/>
         {children}
-      <Footer />
-      </body>
-    </html>
+        <Footer/>
+        </body>
+        </html>
+      </ModalProvider>
+
   );
 }

@@ -33,7 +33,7 @@ export const Contacts = () => {
                 hidden: { opacity: 0, y: 50 },
                 visible: { opacity: 1, y: 0, transition: { duration: 0.5 } }
             }}
-            className="bg-gray-100 rounded-md md:px-[160px] sm:px-[10px] md:mt-[100px] sm:mt-[40px]"
+            className="bg-gray-100 rounded-md md:mx-[15vw] sm:px-[10px] md:mt-[100px] sm:mt-[40px]"
         >
             <div className="grid md:grid-cols-2 sm:grid-cols-1 gap-4 items-center">
                 <div className='flex justify-center items-end sm:hidden md:block'>

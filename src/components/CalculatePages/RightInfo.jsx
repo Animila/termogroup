@@ -20,16 +20,16 @@ export const RightInfo = () => {
     </div>
     <div className="text-center">
       <p className="text-sm mb-4">После ответов на вопросы <span className="text-main_one">вы получите:</span></p>
-      <ul className="space-y-[40px]">
-        <li className="flex items-center">
+      <ul className="space-y-[40px] justify-start">
+        <li className="flex text-start">
           {/*<Image src="/images/icon1.png" alt="Icon 1" width={40} height={40} className="mr-2"/>*/}
           <span>- Подбор фактуры и толщины фасадных панелей</span>
         </li>
-        <li className="flex items-center">
+        <li className="flex text-start">
           {/*<Image src="/images/icon2.png" alt="Icon 2" width={40} height={40} className="mr-2"/>*/}
           <span>- Смету с точной стоимостью всех материалов и работ</span>
         </li>
-        <li className="flex items-center">
+        <li className="flex text-start">
           {/*<Image src="/images/icon3.png" alt="Icon 3" width={40} height={40} className="mr-2"/>*/}
           <span>- Скидку 5% на фасадные панели полифасад</span>
         </li>

@@ -45,9 +45,9 @@ export const HeaderSection = () => {
       <motion.section
           initial="hidden"
           animate="visible"
-          className="sm:px-[10px] sm:mt-[20px] md:px-[100px] pb-[200px] md:mt-[100px] block bg-white relative"
+          className="sm:px-[10px] sm:mt-[20px] md:mx-[15vw] pb-[200px] md:mt-[100px] block bg-white relative"
       >
-        <div className="absolute lg:right-[20px] md:right-0 md:top-[70px] md:translate-x-0 md:overflow-x-hidden md:h-[450px] sm:right-[50%] sm:top-[250px] sm:translate-x-[50%] z-0">
+        <div className="absolute lg:right-[20px] md:right-0 md:top-[70px] md:translate-x-0 md:overflow-x-visible md:h-[450px] sm:right-[50%] sm:top-[250px] sm:translate-x-[50%] z-0">
           <motion.div
               initial="hidden"
               animate="visible"
@@ -55,11 +55,11 @@ export const HeaderSection = () => {
               viewport={{ once: true }}
           >
             <Image
-                className="sm:absolute sm:w-[250px] sm:top-[40px] sm:right-[-50px] sm:z-30 md:static md:z-0 md:w-[300px] lg:w-[400px] xl:w-[600px] 2xl:w-[700px]"
+                className="sm:absolute sm:top-[40px] sm:right-[-50px] sm:z-30 md:static md:z-0"
                 src={"/images/panels/1_1.png"}
                 alt={"Панель 1"}
-                width={700}
-                height={304}
+                width={500}
+                height={104}
             />
           </motion.div>
           <motion.div
@@ -69,11 +69,11 @@ export const HeaderSection = () => {
               viewport={{ once: true }}
           >
             <Image
-                className="absolute md:top-[70px] md:left-[100px] md:right-auto z-20 sm:top-[20px] sm:left-auto sm:right-[60px] sm:w-[250px] md:w-[300px] lg:w-[400px] xl:w-[600px] 2xl:w-[700px]"
+                className="absolute md:top-[70px] md:left-[20px] md:right-auto z-20 sm:top-[20px] sm:left-auto sm:right-[60px]"
                 src={"/images/panels/1_2.png"}
                 alt={"Панель 2"}
-                width={700}
-                height={304}
+                width={500}
+                height={104}
             />
           </motion.div>
           <motion.div
@@ -83,11 +83,11 @@ export const HeaderSection = () => {
               viewport={{ once: true }}
           >
             <Image
-                className="sm:static sm:right-0 sm:w-[250px] sm:z-10 md:absolute md:top-[170px] md:left-[190px] md:z-30 md:w-[300px] lg:w-[400px] xl:w-[600px] 2xl:w-[700px]"
+                className="sm:static sm:right-0 sm:z-10 md:absolute md:top-[170px] md:left-[40px] md:z-30"
                 src={"/images/panels/1_3.png"}
                 alt={"Панель 3"}
-                width={700}
-                height={304}
+                width={500}
+                height={104}
             />
           </motion.div>
         </div>

@@ -16,7 +16,7 @@ export const Meeting = () => {
                 hidden: { opacity: 0, y: 50 },
                 visible: { opacity: 1, y: 0, transition: { duration: 0.5 } }
             }}
-            className="bg-light_black md:px-[160px] sm:py-[20px] sm:px-[10px] md:pt-[78px] sm:pt-[20px]"
+            className="bg-light_black md:px-[15vw] sm:py-[20px] sm:px-[10px] md:pt-[78px] sm:pt-[20px]"
         >
             <div className="w-full bg-white md:min-h-[500px] sm:py-[20px] md:grid md:grid-cols-12 sm:flex sm:flex-col-reverse sm:justify-between">
                 <div className="w-full sm:px-[10px] md:pl-[72px] pt-[45px] md:block sm:flex sm:items-center sm:flex-col md:col-span-7 span">

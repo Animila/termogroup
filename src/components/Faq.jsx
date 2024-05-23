@@ -56,7 +56,7 @@ export const Faq = () => {
     };
 
     return (
-        <div className="sm:px-[10px] md:px-[170px] ">
+        <div className="sm:px-[10px] md:mx-[15vw] ">
             <h2 className="sm:text-[40px] sm:text-center sm:leading-[35px]  md:text-[78px] md:leading-[74px] my-[60px]">Частые вопросы</h2>
             <div className="grid sm:grid-cols-1 md:grid-cols-3 gap-[32px]">
                 {questions.map((item, index) => {
@@ -71,7 +71,7 @@ export const Faq = () => {
                                 hidden: { opacity: 0, y: 50 },
                                 visible: { opacity: 1, y: 0, transition: { duration: 0.5 } }
                             }}
-                            className='flex flex-col items-center'
+                            className='flex flex-col'
                         >
                             <div className="bg-accent_two rounded-br-[40px] rounded-tr-[40px] rounded-tl-[40px] rounded-bl-0 px-[45px] py-[22px] h-[118px] flex justify-center items-center text-[18px] leading-[24px]">
                                 {item.question}

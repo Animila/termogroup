@@ -18,8 +18,7 @@ export const FivePageCalculate = ({setStep, register, watch, setValue}) => {
       }}
   >
     <div className="flex flex-col gap-[20px]">
-      <p className="text-white text-[30px] leading-[32px]">Толщина утеплителя?</p>
-      <span className="text-white text-[17px] leading-[18px]">Выберите толщину утеплителя</span>
+      <p className="text-white text-[30px] leading-[32px]">Требуется ли замер фасада?</p>
       <div className="grid grid-cols-2 gap-[20px]">
         <label onClick={() => setValue('check', 'Да')}
                className={`flex ${watch('check') === 'Да' ? 'bg-main_one text-white' : 'bg-transparent text-accent_one'} items-center gap-[20px] border-[1px] rounded-[10px] h-[70px] px-[20px] py-[20px] `}>

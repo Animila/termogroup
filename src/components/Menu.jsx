@@ -5,7 +5,7 @@ import {useModal} from "@/contexts/ModalContext";
 export const Menu = () => {
   const {changeActivePhone} = useModal()
 
-  return <div className="flex items-center justify-between sm:flex-col md:flex-row fixed top-0 left-0 z-50 h-[100px] w-full sm:px-[10px] md:px-[100px] border-b-2 border-b-gray border-opacity-10 bg-white">
+  return <div className="flex items-center justify-between sm:flex-col md:flex-row fixed top-0 left-0 z-50 h-[100px] w-full sm:px-[10px] md:px-[15vw] border-b-2 border-b-gray border-opacity-10 bg-white">
     <div className="flex items-center justify-center h-[100px] text-main_one">
       <a href="/" className="text-[30px] font-bold">TermoGroup</a> <sub className="text-[15px]">Алматы</sub>
     </div>

@@ -20,7 +20,7 @@ export const CalculatedSection = () => {
   return (
       <motion.section
           ref={ref}
-          className="flex sm:pb-[50px] md:min-h-[800px] sm:px-[10px] md:px-[160px] sm:pt-[20px] md:pt-[50px] bg-gray_dark gap-[20px] justify-between relative"
+          className="flex sm:pb-[50px] md:min-h-[800px] sm:px-[10px] md:px-[15vw] sm:pt-[20px] md:pt-[50px] bg-gray_dark gap-[20px] justify-between relative"
           initial="hidden"
           animate={isInView ? "visible" : "hidden"}
           variants={{
@@ -30,7 +30,7 @@ export const CalculatedSection = () => {
       >
         <div className="sm:w-full md:w-[890px]">
           <h2 className="sm:text-[20px] md:text-[53px] sm:leading-[23px] md:leading-[56px] text-white">
-            Ответьте на 5 вопроса и получите
+            Ответьте на 5 вопросов и получите
             <span className="text-main_one"> расчет + скидку 5%</span>
           </h2>
           <ProgressBar step={step} />

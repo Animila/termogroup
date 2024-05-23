@@ -43,7 +43,7 @@ export const Projects = () => {
     ];
 
     return (
-        <div className='md:px-[160px] sm:px-[10px] mt-[65px]'>
+        <div className='md:px-[15vw] sm:px-[10px] mt-[65px]'>
             <div className='flex md:flex-row justify-between sm:flex-col'>
                 <h3 className='sm:text-[29px] md:text-[39px] sm:leading-[33px] md:leading-[43px]'>
                     Реализовано<br />

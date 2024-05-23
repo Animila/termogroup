@@ -47,12 +47,12 @@ export const EndPageCalculate = ({setStep, register, watch, setValue}) => {
             <WhatsAppSVG/>
             <span className="text-white text-[13px] leading-[18px] sm:hidden md:block">WhatsApp</span>
           </div>
-          <div
-              onClick={() => setValue('social', 'viber')}
-              className={`flex ${watch('social') === 'viber' ? 'bg-main_one' : 'bg-gray'} active:bg-main_one hover:bg-gray_dark justify-center items-center gap-[15px]  h-[70px] w-full cursor-pointer`}>
-            <ViberSVG/>
-            <span className="text-white text-[13px] leading-[18px] sm:hidden md:block">Viber</span>
-          </div>
+          {/*<div*/}
+          {/*    onClick={() => setValue('social', 'viber')}*/}
+          {/*    className={`flex ${watch('social') === 'viber' ? 'bg-main_one' : 'bg-gray'} active:bg-main_one hover:bg-gray_dark justify-center items-center gap-[15px]  h-[70px] w-full cursor-pointer`}>*/}
+          {/*  <ViberSVG/>*/}
+          {/*  <span className="text-white text-[13px] leading-[18px] sm:hidden md:block">Viber</span>*/}
+          {/*</div>*/}
         </div>
         <div className="mt-[30px]">
           <div className="flex border-gray border-[1px]">

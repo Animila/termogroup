@@ -45,7 +45,7 @@ export const HeaderSection = () => {
       <motion.section
           initial="hidden"
           animate="visible"
-          className="sm:px-[10px] sm:mt-[20px] md:mx-[15vw] pb-[200px] md:mt-[100px] block bg-white relative"
+          className="sm:px-[10px] sm:mt-[20px] md:mx-[15vw] pb-[70px] md:mt-[100px] block bg-white relative"
       >
         <div className="absolute lg:right-[20px] md:right-0 md:top-[70px] md:translate-x-0 md:overflow-x-visible md:h-[450px] sm:right-[50%] sm:top-[250px] sm:translate-x-[50%] z-0">
           <motion.div
@@ -127,7 +127,7 @@ export const HeaderSection = () => {
             animate="visible"
             variants={textVariants}
             viewport={{ once: true }}
-            className=" mt-[70px] z-10"
+            className=" mt-[25px] z-10"
         >
           {/*<button className="w-[318px] h-[70px] flex justify-center sm:mx-auto items-center gap-[10px] bg-main_one rounded-[70px]">*/}
           {/*<span*/}

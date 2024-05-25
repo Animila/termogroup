@@ -13,6 +13,7 @@ import {useState} from "react";
 import {SubmitManager} from "@/components/Modals/SubmitManager";
 import {useModal} from "@/contexts/ModalContext";
 import {OfficeModal} from "@/components/Modals/OfficeView";
+import {Video} from "@/components/Video";
 
 export default function Home() {
     const {activePhone, activeVideo, activeOffice } = useModal()
@@ -25,6 +26,7 @@ export default function Home() {
             <CalculatedSection />
             <Constructor />
             <Meeting />
+            <Video/>
             <Projects />
             <SpecialOffers/>
             <Faq/>

@@ -129,17 +129,18 @@ export const HeaderSection = () => {
             viewport={{ once: true }}
             className=" mt-[70px] z-10"
         >
-          <button className="w-[318px] h-[70px] flex justify-center sm:mx-auto items-center gap-[10px] bg-main_one rounded-[70px]">
-          <span
-              className="text-[18px] leading-[23px] tracking-[0.3px] text-white"
-              onClick={() => {
-                changeActiveVideo();
-              }}
-          >
-            Смотрите видео
-          </span>
-            <PlaySVG />
-          </button>
+          {/*<button className="w-[318px] h-[70px] flex justify-center sm:mx-auto items-center gap-[10px] bg-main_one rounded-[70px]">*/}
+          {/*<span*/}
+          {/*    className="text-[18px] leading-[23px] tracking-[0.3px] text-white"*/}
+          {/*    onClick={() => {*/}
+          {/*      changeActiveVideo();*/}
+          {/*    }}*/}
+          {/*>*/}
+          {/*  Смотрите видео*/}
+          {/*</span>*/}
+          {/*  <PlaySVG />*/}
+          {/*</button>*/}
+          <div className={'text-center font-bold md:text-[40px] sm:text-[30px] text-main_one'}>№1 ПРОИЗВОДИТЕЛЬ ТЕРМОПАНЕЛЕЙ НА МРАМОРНО-ПОЛИМЕРНОЙ ОСНОВЕ ПО ТУРЕЦКОЙ ТЕХНОЛОГИИ</div>
         </motion.div>
       </motion.section>
   );

@@ -20,7 +20,7 @@ export const Meeting = () => {
         >
             <div className="w-full bg-white md:min-h-[500px] sm:py-[20px] md:grid md:grid-cols-12 sm:flex sm:flex-col-reverse sm:justify-between">
                 <div className="w-full sm:px-[10px] md:pl-[72px] pt-[45px] md:block sm:flex sm:items-center sm:flex-col md:col-span-7 span">
-                    <h3 className="text-main_one sm:text-[40px] sm:leading-[50px] md:text-[67px] md:leading-[76px] font-bold md:tracking-[-1.3px] sm:text-center md:text-start">
+                    <h3 className="text-main_one sm:text-[40px] sm:leading-[50px] md:text-[64px] md:leading-[76px] font-bold md:tracking-[-1.3px] sm:text-center md:text-start">
                         Ознакомьтесь лично
                     </h3>
                     <h4 className="md:text-[37px] sm:text-[25px] font-bold sm:leading-[23px] md:leading-[32px] mt-[10px] sm:text-center md:text-start">

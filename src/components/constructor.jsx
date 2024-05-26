@@ -73,7 +73,7 @@ export const Constructor = () => {
 
   return (
       <div className="bg-light_black sm:pt-[50px] md:pt-[284px] md:px-[15vw] pb-[100px] sm:px-[10px]">
-        <h2 className="md:font-bold sm:text-[35px] sm:leading-[43px] md:text-[67px] md:leading-[70px] text-center text-white">
+        <h2 className="md:font-bold sm:text-[35px] sm:leading-[43px] md:text-[64px] md:leading-[70px] text-center text-white">
           Простая и надежная
           <br />
           <span className="text-main_one">конструкция на ваш выбор</span>

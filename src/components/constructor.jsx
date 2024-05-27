@@ -37,19 +37,19 @@ export const Constructor = () => {
   ];
   const layout2 = [
     {
-      image: '/images/layout2/1.png',
+      image: '/images/layout2/1.jpg',
       type: 'Классика'
     },
     {
-      image: '/images/layout2/2.png',
+      image: '/images/layout2/2.jpg',
       type: 'Камень'
     },
     {
-      image: '/images/layout2/3.png',
+      image: '/images/layout2/3.jpg',
       type: 'Баварская'
     },
     {
-      image: '/images/layout2/4.png',
+      image: '/images/layout2/4.jpg',
       type: 'Скала'
     },
   ];

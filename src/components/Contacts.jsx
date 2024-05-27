@@ -79,7 +79,7 @@ export const Contacts = () => {
                                 className="w-full bg-transparent text-black text-[17px] outline-0"
                                 mask="+7(999)999-99-99"
                                 maskChar=" "
-                                placeholder="Введите телефон и я перезвоню через 30 секунд"
+                                placeholder="Введите телефон"
                                 {...register('phone')}
                             />
                         </div>

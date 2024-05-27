@@ -7,31 +7,31 @@ import { useInView } from "@/hooks/useInView";
 export const Constructor = () => {
   const layout1 = [
     {
-      image: '/images/layout1/1.png',
+      image: '/images/layout1/1.jpg',
       color: '#22120C'
     },
     {
-      image: '/images/layout1/2.png',
+      image: '/images/layout1/2.jpg',
       color: '#503F35'
     },
     {
-      image: '/images/layout1/3.png',
+      image: '/images/layout1/3.jpg',
       color: '#0E1714'
     },
     {
-      image: '/images/layout1/4.png',
+      image: '/images/layout1/4.jpg',
       color: '#A87438'
     },
     {
-      image: '/images/layout1/5.png',
+      image: '/images/layout1/5.jpg',
       color: '#3E4641'
     },
     {
-      image: '/images/layout1/6.png',
+      image: '/images/layout1/6.jpg',
       color: '#752D1C'
     },
     {
-      image: '/images/layout1/7.png',
+      image: '/images/layout1/7.jpg',
       color: '#999F88'
     },
   ];

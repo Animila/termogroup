@@ -45,11 +45,11 @@ export const Constructor = () => {
       type: 'Камень'
     },
     {
-      image: '/images/layout2/3.jpg',
+      image: '/images/layout2/4.jpg',
       type: 'Баварская'
     },
     {
-      image: '/images/layout2/4.jpg',
+      image: '/images/layout2/3.jpg',
       type: 'Скала'
     },
   ];

@@ -72,7 +72,7 @@ export const Constructor = () => {
   const [ref2, isInView2] = useInView({ threshold: 0.1 });
 
   return (
-      <div className="bg-light_black sm:pt-[50px] md:pt-[284px] md:px-[15vw] pb-[100px] sm:px-[10px]">
+      <div className="bg-light_black sm:pt-[50px] md:pt-[84px] md:px-[15vw] pb-[100px] sm:px-[10px]">
         <h2 className="md:font-bold sm:text-[35px] sm:leading-[43px] md:text-[64px] md:leading-[70px] text-center text-white">
           Простая и надежная
           <br />
@@ -125,7 +125,7 @@ export const Constructor = () => {
             <Image src="/images/constructorLayer1.png" alt="пример" width={135} height={110} />
             <h3 className="sm:text-center mt-[36px] text-[29px] leading-[35px]">Декоративный слой</h3>
             <p className="mt-[23px] text-[19px] leading-[24px] text-accent_one sm:text-center md:text-start">
-              Мы можем комбинировать имеющихся у нас 12 цветов, которые позволят отличить фасад от других домов
+              Мы можем комбинировать имеющиеся у нас 12 цветов, которые позволят отличить фасад от других домов
             </p>
           </div>
         </motion.div>

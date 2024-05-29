@@ -99,7 +99,7 @@ export const HeaderSection = () => {
             className="pt-[100px] z-10"
         >
           <span className="block sm:text-[25px] md:text-[28px] font-bold">Фасадные панели</span>
-          <h1 className="block sm:text-[50px] md:text-[70px] font-black sm:leading-[30px] md:leading-[70px] text-main_one sm:mt-[10px] md:mt-[29px]">№1 производитель <br/> термопанелей</h1>
+          <h1 className="block sm:text-[40px] md:text-[70px] font-black sm:leading-[30px] md:leading-[70px] text-main_one sm:mt-[10px] md:mt-[29px]">№1 производитель <br/> термопанелей</h1>
           <span className="block sm:text-[25px] md:text-[28px] font-bold sm:mt-[15px] md:mt-[39px]">- созданы дарить тепло!</span>
         </motion.div>
         <motion.div

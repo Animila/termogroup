@@ -9,13 +9,33 @@ import { ThreePageCalculate } from "@/components/CalculatePages/Steps/Three";
 import { FourPageCalculate } from "@/components/CalculatePages/Steps/Four";
 import { FivePageCalculate } from "@/components/CalculatePages/Steps/Five";
 import { EndPageCalculate } from "@/components/CalculatePages/Steps/End";
-import {useInView} from "@/hooks/useInView";
+import { useInView } from "@/hooks/useInView";
 
 export const CalculatedSection = () => {
   const [step, setStep] = useState(1);
   const { register, handleSubmit, watch, formState: { errors }, setValue } = useForm();
-  const onSubmit = (data) => console.log(data);
   const [ref, isInView] = useInView({ threshold: 0.1 });
+
+  const onSubmit = async (data) => {
+    try {
+      const response = await fetch('https://makeforms.makeroi.tech/webhook/23658264-598f-430b-8c16-08c2b3086261', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json'
+        },
+        body: JSON.stringify(data)
+      });
+
+      if (!response.ok) {
+        throw new Error('Network response was not ok');
+      }
+
+      const result = await response.json();
+      console.log(result);
+    } catch (error) {
+      console.error('Error submitting form:', error);
+    }
+  };
 
   return (
       <motion.section
@@ -59,5 +79,7 @@ const SwitchSteps = ({ step, setStep, register, watch, setValue }) => {
       return <FivePageCalculate setStep={setStep} register={register} watch={watch} setValue={setValue} />;
     case 6:
       return <EndPageCalculate setStep={setStep} register={register} watch={watch} setValue={setValue} />;
+    default:
+      return null;
   }
 };

@@ -47,7 +47,7 @@ export const HeaderSection = () => {
           animate="visible"
           className="sm:px-[10px] sm:mt-[20px] md:mx-[15vw] pb-[70px] md:mt-[100px] block bg-white relative"
       >
-        <div className="absolute lg:right-[20px] md:right-0 md:top-[70px] md:translate-x-0 md:overflow-x-visible md:h-[450px] sm:right-[50%] sm:top-[300px] sm:translate-x-[50%] z-0">
+        <div className="absolute lg:right-[20px] md:right-0 md:top-[70px] md:translate-x-0 md:overflow-x-visible md:h-[450px] sm:right-[50%] sm:top-[350px] sm:translate-x-[50%] z-0">
           <motion.div
               initial="hidden"
               animate="visible"
@@ -99,7 +99,7 @@ export const HeaderSection = () => {
             className="pt-[100px] z-10"
         >
           <span className="block sm:text-[25px] md:text-[28px] font-bold">Фасадные панели</span>
-          <h1 className="block sm:text-[40px] md:text-[70px] font-black sm:leading-[30px] md:leading-[70px] text-main_one sm:mt-[10px] md:mt-[29px]">№1 производитель <br/> термопанелей</h1>
+          <h1 className="block sm:text-[40px] md:text-[60px] font-black sm:leading-[30px] md:leading-[70px] text-main_one sm:mt-[10px] md:mt-[29px]">№1 производитель <br/> термопанелей<br></br> на мраморно-<br/>полимерной основе<br/> по турецкой технологии</h1>
           <span className="block sm:text-[25px] md:text-[28px] font-bold sm:mt-[15px] md:mt-[39px]">- созданы дарить тепло!</span>
         </motion.div>
         <motion.div
@@ -140,7 +140,6 @@ export const HeaderSection = () => {
           {/*</span>*/}
           {/*  <PlaySVG />*/}
           {/*</button>*/}
-          <div className={'text-center font-bold md:text-[40px] sm:text-[30px] text-main_one'}>№1 ПРОИЗВОДИТЕЛЬ ТЕРМОПАНЕЛЕЙ НА МРАМОРНО-ПОЛИМЕРНОЙ ОСНОВЕ ПО ТУРЕЦКОЙ ТЕХНОЛОГИИ</div>
         </motion.div>
       </motion.section>
   );

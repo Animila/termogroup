@@ -47,7 +47,7 @@ export const HeaderSection = () => {
           animate="visible"
           className="sm:px-[10px] sm:mt-[20px] md:mx-[15vw] pb-[70px] md:mt-[100px] block bg-white relative"
       >
-        <div className="absolute lg:right-[20px] md:right-0 md:top-[70px] md:translate-x-0 md:overflow-x-visible md:h-[450px] sm:right-[50%] sm:top-[350px] sm:translate-x-[50%] z-0">
+        <div className="absolute lg:right-[20px] md:right-0 md:top-[70px] md:translate-x-0 md:overflow-x-visible md:h-[450px] sm:right-[50%] sm:top-[450px] sm:translate-x-[50%] z-0">
           <motion.div
               initial="hidden"
               animate="visible"

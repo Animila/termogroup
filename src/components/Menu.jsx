@@ -14,7 +14,7 @@ export const Menu = () => {
         <PhoneSVG />
         <a href="tel:+77772096800" className="ml-[10px] sm:text-[17px] md:text-[22px]">+7 777 209 68 00</a>
       </div>
-      <div className="flex items-center justify-center sm:px-[10px] md:px-[30px] h-fit" onClick={() => {
+      <div className="flex items-center justify-center sm:px-[10px] md:px-[30px] h-fit cursor-pointer" onClick={() => {
         changeActivePhone()
       }}>
         Заказать звонок

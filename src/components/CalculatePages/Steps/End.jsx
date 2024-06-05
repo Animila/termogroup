@@ -80,10 +80,10 @@ export const EndPageCalculate = ({setStep, register, watch, setValue}) => {
             <NextSVG color={active ? "white" : "#747F80"}/>
           </button>
           <span className="text-accent_one text-wrap text-[13px] leading-[16px] w-[255px] ">Нажимая на кнопку, вы даете согласие
-        <a href="#" className="underline"> на обработку персональных данных</a>
+        <a href="/terms" className="underline"> на обработку персональных данных</a>
       </span>
         </div>
       </div>
 
   </motion.div>
-    }
+}

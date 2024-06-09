@@ -31,7 +31,7 @@ export const Contacts = () => {
         setIsLoading(true);
         try {
             console.log('3456 ', data)
-            const response = await fetch('http://amoconnect.ru/amo-kazfibrapfz/api/slug/phone_manager', {
+            const response = await fetch('https://amoconnect.ru/amo-kazfibrapfz/api/slug/phone_manager', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json'

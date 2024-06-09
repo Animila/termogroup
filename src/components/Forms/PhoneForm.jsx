@@ -11,7 +11,7 @@ const PhoneForm = ({changeActivePhone}) => {
     const onSubmit = async (data) => {
         setIsLoading(true);
         try {
-            const response = await fetch('http://amoconnect.ru/amo-kazfibrapfz/api/slug/phone_manager', {
+            const response = await fetch('https://amoconnect.ru/amo-kazfibrapfz/api/slug/phone_manager', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json'

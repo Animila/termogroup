@@ -22,7 +22,7 @@ export const CalculatedSection = () => {
         setIsLoading(true);
         try {
             console.log('23456 ', data )
-            const response = await fetch('http://amoconnect.ru/amo-kazfibrapfz/api/slug/calculation', {
+            const response = await fetch('https://amoconnect.ru/amo-kazfibrapfz/api/slug/calculation', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json'

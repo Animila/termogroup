@@ -77,7 +77,7 @@ export const Projects = () => {
                             className='sm:col-span-1 md:col-span-4 bg-white shadow-lg rounded-lg overflow-hidden'
                         >
                             <div className='relative w-full h-[200px]'>
-                                <Image src={item.images[0]} alt={`Project image ${index + 1}`} layout="fill" objectFit="cover" />
+                                <Image src={item.images[0]} alt={`Project image ${index + 1}`} fill style={{objectFit:"cover"}} />
                             </div>
                             <div className='p-4'>
                                 <div className='text-[16px] leading-[19px]'>Утепление</div>

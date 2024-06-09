@@ -8,7 +8,7 @@ import {useEffect, useState} from "react";
 import InputMask from 'react-input-mask';
 import { motion } from "framer-motion";
 
-export const EndPageCalculate = ({setStep, register, watch, setValue}) => {
+export const EndPageCalculate = ({setStep, register, watch, setValue, isLoading}) => {
   const [active, setActive] = useState(false)
 
   useEffect(() => {
@@ -76,8 +76,14 @@ export const EndPageCalculate = ({setStep, register, watch, setValue}) => {
         <div className="mt-[60px] flex md:flex-row sm:flex-col items-center gap-[30px]">
           <button disabled={!active}
                   className={`flex ${active ? 'bg-main_one text-white' : 'bg-gray text-accent_one'} justify-center items-center w-[358px] h-[60px] rounded-[100px]  gap-[10px]`}>
-            <span className="text-[19px] leading-[24px]">Получить расчет и скидку</span>
-            <NextSVG color={active ? "white" : "#747F80"}/>
+            {isLoading ? (
+                <div className="loader"></div>
+            ) : (
+                <>
+                  <span className="text-[19px] leading-[24px]">Получить расчет и скидку</span>
+                  <NextSVG color={active ? "white" : "#747F80"}/>
+                </>
+            )}
           </button>
           <span className="text-accent_one text-wrap text-[13px] leading-[16px] w-[255px] ">Нажимая на кнопку, вы даете согласие
         <a href="/terms" className="underline"> на обработку персональных данных</a>

@@ -12,3 +12,16 @@
 *::-webkit-scrollbar {
     display: none; /* Chrome, Safari, Opera */
 }
+
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+.loader {
+    @apply w-5 h-5 border-4 border-t-transparent border-white rounded-full animate-spin;
+}

@@ -12,30 +12,78 @@ import { EndPageCalculate } from "@/components/CalculatePages/Steps/End";
 import { useInView } from "@/hooks/useInView";
 
 export const CalculatedSection = () => {
-  const [step, setStep] = useState(1);
-  const { register, handleSubmit, watch, formState: { errors }, setValue } = useForm();
-  const [ref, isInView] = useInView({ threshold: 0.1 });
+    const [step, setStep] = useState(1);
+    const { register, handleSubmit, watch, formState: { errors }, setValue } = useForm();
+    const [ref, isInView] = useInView({ threshold: 0.1 });
+    const [isLoading, setIsLoading] = useState(false);
+    const [isSubmitted, setIsSubmitted] = useState(false);
 
-  const onSubmit = async (data) => {
-    try {
-      const response = await fetch('https://makeforms.makeroi.tech/webhook/23658264-598f-430b-8c16-08c2b3086261', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json'
-        },
-        body: JSON.stringify(data)
-      });
+    const onSubmit = async (data) => {
+        setIsLoading(true);
+        try {
+            console.log('23456 ', data )
+            const response = await fetch('http://amoconnect.ru/amo-kazfibrapfz/api/slug/calculation', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify({
+                    "url": "https://termogroup.kz",
+                    "phone": data.phone,
+                    "name": data.name,
+                    "lead_name": "заявка с сайта",
+                    "lead_fields": {
+                        "66749": ['алматы', 'астана', 'семей', 'атырау', 'павлодар', 'караганда', 'усть-каменогорск', 'актобе', 'уральск', 'тараз', 'кызылорда', 'талдыкорган'].includes(data.city.toLowerCase().trim()) ? data.city : undefined,
+                        "353873": data.size,
+                        "836825": data.width,
+                        "836827": new Date(data.date),
+                        "836829": data.check === "Да"
+                    },
+                    "contact_tags": {
+                        "836831": data.social
+                    },
+                    "contact_fields": {
+                        "836831": data.social,
+                        "66503": true
+                    },
+                    "lead_comment": `Город: ${data.city}`
+                })
+            });
 
-      if (!response.ok) {
-        throw new Error('Network response was not ok');
-      }
+            if (!response.ok) {
+                throw new Error('Network response was not ok');
+            }
 
-      const result = await response.json();
-      console.log(result);
-    } catch (error) {
-      console.error('Error submitting form:', error);
+            const result = await response.json();
+            console.log(result);
+            setIsSubmitted(true);
+        } catch (error) {
+            console.error('Error submitting form:', error);
+        } finally {
+            setIsLoading(false);
+        }
+    };
+
+    if (isSubmitted) {
+        return (
+            <motion.section
+                ref={ref}
+                className="flex sm:pb-[50px] md:min-h-[800px] sm:px-[10px] md:px-[15vw] sm:pt-[20px] md:pt-[50px] bg-gray_dark gap-[20px] justify-between relative"
+                initial="hidden"
+                animate={isInView ? "visible" : "hidden"}
+                variants={{
+                    hidden: { opacity: 0, y: 50 },
+                    visible: { opacity: 1, y: 0, transition: { duration: 0.5 } }
+                }}
+            >
+                <div className="sm:w-full md:w-[890px]">
+                    <h2 className="sm:text-[20px] md:text-[53px] sm:leading-[23px] md:leading-[56px] text-white">
+                        Спасибо за ваши ответы! Ваша заявка уже обрабатывается!
+                    </h2>
+                </div>
+            </motion.section>
+        );
     }
-  };
 
   return (
       <motion.section
@@ -55,7 +103,7 @@ export const CalculatedSection = () => {
           </h2>
           <ProgressBar step={step} />
           <form onSubmit={handleSubmit(onSubmit)}>
-            <SwitchSteps step={step} setStep={setStep} register={register} watch={watch} setValue={setValue} />
+            <SwitchSteps step={step} setStep={setStep} register={register} watch={watch} setValue={setValue} isLoading={isLoading} />
           </form>
         </div>
         <div className="hidden lg:block w-[290px]">
@@ -65,7 +113,7 @@ export const CalculatedSection = () => {
   );
 };
 
-const SwitchSteps = ({ step, setStep, register, watch, setValue }) => {
+const SwitchSteps = ({ step, setStep, register, watch, setValue, isLoading }) => {
   switch (step) {
     case 1:
       return <OnePageCalculate setStep={setStep} register={register} watch={watch} />;
@@ -78,7 +126,7 @@ const SwitchSteps = ({ step, setStep, register, watch, setValue }) => {
     case 5:
       return <FivePageCalculate setStep={setStep} register={register} watch={watch} setValue={setValue} />;
     case 6:
-      return <EndPageCalculate setStep={setStep} register={register} watch={watch} setValue={setValue} />;
+      return <EndPageCalculate setStep={setStep} register={register} watch={watch} setValue={setValue} isLoading={isLoading} />;
     default:
       return null;
   }

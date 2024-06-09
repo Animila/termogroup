@@ -17,12 +17,54 @@ export const Contacts = () => {
     } = useForm();
 
     const [active, setActive] = useState(false);
+    const [isLoading, setIsLoading] = useState(false);
+    const [isSubmitted, setIsSubmitted] = useState(false);
 
     useEffect(() => {
         setActive((watch('phone') && watch('phone').trim() !== '') && (watch('text') && watch('text').trim() !== ''));
     }, [watch('phone'), watch('text')]);
 
     const [ref, isInView] = useInView({ threshold: 0.1 });
+
+
+    const onSubmit = async (data) => {
+        setIsLoading(true);
+        try {
+            console.log('3456 ', data)
+            const response = await fetch('http://amoconnect.ru/amo-kazfibrapfz/api/slug/phone_manager', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify({
+                    "url": "https://termogroup.kz",
+                    "phone": data.phone,
+                    "lead_name": "заказ с сайта (звонок)",
+                    "contact_tags": {
+                        "836831": 'telephone'
+                    },
+                    "contact_fields": {
+                        "836831": 'telephone',
+                        "66503": true
+                    },
+                    "lead_comment": data.text
+                })
+            });
+
+            if (!response.ok) {
+                throw new Error('Network response was not ok');
+            }
+
+            const result = await response.json();
+            console.log(result);
+            setIsSubmitted(true);
+        } catch (error) {
+            console.error('Error submitting form:', error);
+        } finally {
+            setIsLoading(false);
+        }
+        console.log('Номер телефона отправлен:', data.phone);
+    };
 
     return (
         <motion.div
@@ -69,44 +111,57 @@ export const Contacts = () => {
                     </ul>
 
                     <div className="mt-[30px]">
-                        <div className="flex border-gray border-[1px]">
-                            <label htmlFor="name" className="flex justify-center items-center px-[31px] py-[24px] md:w-[78px]">
-                                <PhoneSVG color={'black'} />
-                            </label>
-                            <InputMask
-                                id={"name"}
-                                type="text"
-                                className="w-full bg-transparent text-black text-[17px] outline-0"
-                                mask="+7(999)999-99-99"
-                                maskChar=" "
-                                placeholder="Введите телефон"
-                                {...register('phone')}
-                            />
-                        </div>
-                        <div className="flex border-gray border-[1px] mt-4">
-                            <label htmlFor="text" className="flex justify-center items-center px-[31px] py-[24px] md:w-[78px]">
-                                <EmailSVG />
-                            </label>
-                            <textarea
-                                id={"text"}
-                                placeholder="Введите сообщение или вопрос. Поле можно пропустить."
-                                {...register('text')}
-                                className="w-full bg-transparent text-black text-[17px] outline-0"
-                            />
-                        </div>
-                    </div>
+                        {isSubmitted ? (
+                            <div className="text-green-500 text-xl font-semibold">
+                                Спасибо! Ваша заявка принята. Мы перезвоним вам в течение 5 минут.
+                            </div>
+                        ) : (
+                            <form onSubmit={handleSubmit(onSubmit)} className="space-y-4">
+                                <div className="flex border-gray border-[1px]">
+                                    <label htmlFor="phone" className="flex justify-center items-center px-[31px] py-[24px] md:w-[78px]">
+                                        <PhoneSVG color={'black'} />
+                                    </label>
+                                    <InputMask
+                                        id="phone"
+                                        type="text"
+                                        className="w-full bg-transparent text-black text-[17px] outline-0"
+                                        mask="+7(999)999-99-99"
+                                        maskChar=" "
+                                        placeholder="Введите телефон"
+                                        {...register('phone')}
+                                    />
+                                </div>
+                                <div className="flex border-gray border-[1px] mt-4">
+                                    <label htmlFor="text" className="flex justify-center items-center px-[31px] py-[24px] md:w-[78px]">
+                                        <EmailSVG />
+                                    </label>
+                                    <textarea
+                                        id="text"
+                                        placeholder="Введите сообщение или вопрос. Поле можно пропустить."
+                                        {...register('text')}
+                                        className="w-full bg-transparent text-black text-[17px] outline-0"
+                                    />
+                                </div>
+                                <div className="mt-[27px] flex md:flex-row sm:flex-col items-center gap-[30px]">
+                                    <button
+                                        disabled={!active}
+                                        type={'submit'}
+                                        className={`flex ${active ? 'bg-main_one text-white' : 'bg-gray text-accent_one'} justify-center items-center w-[358px] h-[60px] rounded-[100px] gap-[10px]`}
+                                    >
+                                        {isLoading ? (
+                                            <div className="loader border-t-transparent border-4 border-white rounded-full w-5 h-5 mx-auto animate-spin"></div>
+                                        ) : (
+                                            <span className="text-[19px] leading-[24px]">Получить консультацию</span>
+                                        )}
+                                    </button>
 
-                    <div className="mt-[27px] flex md:flex-row sm:flex-col items-center gap-[30px]">
-                        <button
-                            disabled={!active}
-                            className={`flex ${active ? 'bg-main_one text-white' : 'bg-gray text-accent_one'} justify-center items-center w-[358px] h-[60px] rounded-[100px] gap-[10px]`}
-                        >
-                            <span className="text-[19px] leading-[24px]">Получить консультацию</span>
-                        </button>
-                        <span className="text-accent_one text-wrap text-[13px] leading-[16px] w-[255px] ">
-              Нажимая на кнопку, вы даете согласие
-              <a href="/terms" className="underline"> на обработку персональных данных</a>
-            </span>
+                                    <span className="text-accent_one text-wrap text-[13px] leading-[16px] w-[255px] ">
+                                    Нажимая на кнопку, вы даете согласие
+                                    <a href="/terms" className="underline"> на обработку персональных данных</a>
+                                </span>
+                                </div>
+                            </form>
+                        )}
                     </div>
                     <div className="flex flex-row items-center mt-[53px]">
                         <PhoneSVG color={'#F22F05'} />

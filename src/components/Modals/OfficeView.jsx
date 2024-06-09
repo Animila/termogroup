@@ -34,7 +34,7 @@ export const OfficeModal = () => {
                     <p className="mb-4">
                         Просто напишите свой номер телефона и удобное время для просмотра. Мы все организуем.
                     </p>
-                    <OfficeForm/>
+                    <OfficeForm changeActiveOffice={changeActiveOffice}/>
                 </div>
                 <div className="p-4 sm:hidden md:block">
                     <Image src="/images/manager.png" alt="Manager" width={200} height={200}/>

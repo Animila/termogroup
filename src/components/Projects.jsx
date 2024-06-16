@@ -1,6 +1,7 @@
 import Image from "next/image";
 import { motion } from "framer-motion";
 import { useInView } from "@/hooks/useInView";
+import { useState } from "react";
 
 export const Projects = () => {
     const projectsList = [
@@ -63,6 +64,11 @@ export const Projects = () => {
             <div className='grid sm:grid-cols-1 md:grid-cols-12 gap-4 mt-8'>
                 {projectsList.map((item, index) => {
                     const [ref, isInView] = useInView({ threshold: 0.1 });
+                    const [currentImageIndex, setCurrentImageIndex] = useState(0);
+
+                    const handleImageToggle = () => {
+                        setCurrentImageIndex((prevIndex) => (prevIndex + 1) % item.images.length);
+                    };
 
                     return (
                         <motion.div
@@ -77,7 +83,10 @@ export const Projects = () => {
                             className='sm:col-span-1 md:col-span-4 bg-white shadow-lg rounded-lg overflow-hidden'
                         >
                             <div className='relative w-full h-[200px]'>
-                                <Image src={item.images[0]} alt={`Project image ${index + 1}`} fill style={{objectFit:"cover"}} />
+                                <Image src={item.images[currentImageIndex]} alt={`Project image ${index + 1}`} fill style={{objectFit:"cover"}} />
+                                <button onClick={handleImageToggle} className="absolute bottom-4 left-4 bg-gray-700 text-white px-2 py-1 rounded bg-main_one">
+                                    До/После
+                                </button>
                             </div>
                             <div className='p-4'>
                                 <div className='text-[16px] leading-[19px]'>Утепление</div>

@@ -14,10 +14,7 @@ export const ProgressBar = ({step}) => {
 
             const first_item = listItems[0].getBoundingClientRect().x;
             const next_item = listItems[next_item_html].getBoundingClientRect().x;
-            totalWidth = ((next_item + (listItems[next_item_html].offsetWidth / 2)) - (first_item + (listItems[0].offsetWidth/ 2))) ;
-            console.log(`1 ${step} `, first_item + listItems[next_item_html].offsetWidth)
-            console.log(`2 ${step} `, next_item + listItems[0].offsetWidth)
-            console.log(`3 ${step} `, totalWidth)
+            totalWidth = ((next_item + (listItems[next_item_html].offsetWidth / 2)) - (first_item + (listItems[0].offsetWidth/ 2)));
             progressBarRef.current.style.width = `${totalWidth}px`;
 
         }
@@ -34,13 +31,13 @@ export const ProgressBar = ({step}) => {
             <li className={`flex ${step >= 3 ? `bg-main_one text-white` : 'bg-gray text-accent_one'} sm:w-[20px] sm:h-[20px] md:w-[40px] md:h-[40px] items-center justify-center rounded-3xl z-10`}>
                 <span className="sm:hidden md:block">3</span>
             </li>
-            <li className={`flex ${step >= 4 ? `bg-main_one text-white` : 'bg-gray text-accent_one'} sm:w-[20px] sm:h-[20px] md:w-[40px] md:h-[40px] items-center justify-center rounded-3xl z-10`}>
-                <span className="sm:hidden md:block">4</span>
-            </li>
-            <li className={`flex ${step >= 5 ? `bg-main_one text-white` : 'bg-gray text-accent_one'} sm:w-[20px] sm:h-[20px] md:w-[40px] md:h-[40px] items-center justify-center rounded-3xl z-10`}>
-                <span className="sm:hidden md:block">5</span>
-            </li>
-            <li className={`flex ${step >= 6 ? `bg-main_one text-white` : 'bg-gray text-accent_one'} sm:h-30px px-[26px] md:h-[40px] items-center justify-center rounded-3xl z-10`}>
+            {/*<li className={`flex ${step >= 4 ? `bg-main_one text-white` : 'bg-gray text-accent_one'} sm:w-[20px] sm:h-[20px] md:w-[40px] md:h-[40px] items-center justify-center rounded-3xl z-10`}>*/}
+            {/*    <span className="sm:hidden md:block">4</span>*/}
+            {/*</li>*/}
+            {/*<li className={`flex ${step >= 5 ? `bg-main_one text-white` : 'bg-gray text-accent_one'} sm:w-[20px] sm:h-[20px] md:w-[40px] md:h-[40px] items-center justify-center rounded-3xl z-10`}>*/}
+            {/*    <span className="sm:hidden md:block">5</span>*/}
+            {/*</li>*/}
+            <li className={`flex ${step >= 4 ? `bg-main_one text-white` : 'bg-gray text-accent_one'} sm:h-30px px-[26px] md:h-[40px] items-center justify-center rounded-3xl z-10`}>
                     <span className="sm:hidden md:block md:mr-[5px]">
                        Расчет +
                     </span>

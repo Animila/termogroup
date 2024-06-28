@@ -35,9 +35,7 @@ export const CalculatedSection = () => {
                     "lead_fields": {
                         "66749": ['алматы', 'астана', 'семей', 'атырау', 'павлодар', 'караганда', 'усть-каменогорск', 'актобе', 'уральск', 'тараз', 'кызылорда', 'талдыкорган'].includes(data.city.toLowerCase().trim()) ? data.city : undefined,
                         "353873": data.size,
-                        "836825": data.width,
-                        "836827": new Date(data.date),
-                        "836829": data.check === "Да"
+                        "836825": data.width
                     },
                     "contact_tags": {
                         "836831": data.social
@@ -122,10 +120,6 @@ const SwitchSteps = ({ step, setStep, register, watch, setValue, isLoading }) =>
     case 3:
       return <ThreePageCalculate setStep={setStep} register={register} watch={watch} />;
     case 4:
-      return <FourPageCalculate setStep={setStep} register={register} watch={watch} />;
-    case 5:
-      return <FivePageCalculate setStep={setStep} register={register} watch={watch} setValue={setValue} />;
-    case 6:
       return <EndPageCalculate setStep={setStep} register={register} watch={watch} setValue={setValue} isLoading={isLoading} />;
     default:
       return null;

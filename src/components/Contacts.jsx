@@ -82,7 +82,7 @@ export const Contacts = () => {
                     <Image src={'/images/manager.png'} alt="Евген" className="w-[350px]" width={400} height={500} />
                 </div>
                 <div>
-                    <div className='flex justify-center items-center z-0 rounded-full overflow-hidden'>
+                    <div className='sm:block md:hidden flex justify-center items-center z-0 rounded-full overflow-hidden'>
                         <Image
                             src="/images/managerCircle.png" // Путь к вашему изображению
                             alt="Ернур"

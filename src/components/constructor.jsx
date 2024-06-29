@@ -72,8 +72,8 @@ export const Constructor = () => {
   const [ref2, isInView2] = useInView({ threshold: 0.1 });
 
   return (
-      <div className="bg-light_black sm:pt-[50px] md:pt-[84px] md:px-[15vw] pb-[100px] sm:px-[10px]">
-        <h2 className="md:font-bold sm:text-[35px] sm:leading-[43px] md:text-[64px] md:leading-[70px] text-center text-white">
+      <div className="bg-light_black sm:pt-[50px] md:pt-[84px] md:px-[15vw] xl:pt-[84px] xl:px-[15vw] pb-[100px] sm:px-[10px]">
+        <h2 className="md:font-bold sm:text-[35px] sm:leading-[43px] md:text-[64px] md:leading-[66px] text-center text-white">
           Простая и надежная
           <br />
           <span className="text-main_one">конструкция на ваш выбор</span>
@@ -98,7 +98,7 @@ export const Constructor = () => {
         >
           <div className='flex flex-col gap-[50px]'>
             <div className='flex justify-center'>
-              <Image className={'sm:w-full sm:h-[300px] md:h-[343px] md:min-w-[500px]'} width={500} height={343} src={layout1[selectedIndex1].image} alt={'Слой'} />
+              <Image className={'sm:w-full sm:h-[300px] md:max-h-[343px]'} width={500} height={343} src={layout1[selectedIndex1].image} alt={'Слой'} />
             </div>
             <div className='flex flex-row justify-center gap-[22px]'>
               <button
@@ -150,7 +150,7 @@ export const Constructor = () => {
         >
           <div className='flex flex-col gap-[50px]'>
             <div className='flex justify-center'>
-              <Image className={'sm:w-full sm:h-[300px] md:h-[343px] md:min-w-[500px]'} width={500} height={343}
+              <Image className={'sm:w-full sm:h-[300px] md:max-h-[343px]'} width={500} height={343}
                      src={layout2[selectedIndex2].image} alt={'Слой'}/>
             </div>
             <div className='flex flex-row justify-center gap-[22px]'>
@@ -173,10 +173,10 @@ export const Constructor = () => {
               </button>
             </div>
           </div>
-          <div className="text-white flex flex-col sm:items-center md:items-start">
+          <div className="text-white flex flex-col sm:items-center xl:items-start">
             <Image src="/images/constructorLayer2.png" alt="пример" width={135} height={110}/>
             <h3 className="mt-[36px] text-[29px] leading-[35px]">Слой фактуры</h3>
-            <p className="mt-[23px] text-[19px] leading-[24px] text-accent_one sm:text-center md:text-start">
+            <p className="mt-[23px] text-[19px] leading-[24px] text-accent_one sm:text-center xl:text-start">
               Мы производим 4 варианта фактуры. Каждый имеет свои преимущества.
             </p>
           </div>

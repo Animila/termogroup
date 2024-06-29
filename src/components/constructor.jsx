@@ -72,7 +72,7 @@ export const Constructor = () => {
   const [ref2, isInView2] = useInView({ threshold: 0.1 });
 
   return (
-      <div className="bg-light_black sm:pt-[50px] md:pt-[84px] md:px-[15vw] xl:pt-[84px] xl:px-[15vw] pb-[100px] sm:px-[10px]">
+      <div className="bg-light_black sm:pt-[50px] md:pt-[84px] lg:px-[5vw] 2xl:px-[15vw] xl:pt-[84px] pb-[100px] sm:px-[10px]">
         <h2 className="md:font-bold sm:text-[35px] sm:leading-[43px] md:text-[64px] md:leading-[66px] text-center text-white">
           Простая и надежная
           <br />
@@ -173,10 +173,10 @@ export const Constructor = () => {
               </button>
             </div>
           </div>
-          <div className="text-white flex flex-col sm:items-center xl:items-start">
+          <div className="text-white flex flex-col sm:items-center md:items-start">
             <Image src="/images/constructorLayer2.png" alt="пример" width={135} height={110}/>
             <h3 className="mt-[36px] text-[29px] leading-[35px]">Слой фактуры</h3>
-            <p className="mt-[23px] text-[19px] leading-[24px] text-accent_one sm:text-center xl:text-start">
+            <p className="mt-[23px] text-[19px] leading-[24px] text-accent_one sm:text-center md:text-start">
               Мы производим 4 варианта фактуры. Каждый имеет свои преимущества.
             </p>
           </div>

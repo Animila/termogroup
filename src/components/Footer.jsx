@@ -10,7 +10,7 @@ import {GeoSVG} from "../../public/icons/GeoSVG";
 import Image from "next/image";
 
 export const Footer = () => {
-  return <div className="sm:gap-[30px] sm:pb-[30px] bg-gray_dark sm:px-[10px] sm:pt-[30px] md:pt-[80px] md:pb-[50px] md:px-[15vw] flex sm:flex-col md:flex-row justify-between">
+  return <div className="sm:gap-[30px] sm:pb-[30px] bg-gray_dark sm:px-[10px] sm:pt-[30px] md:pt-[80px] md:pb-[50px] lg:px-[5vw] 2xl:px-[15vw] flex sm:flex-col md:flex-row justify-between">
       <div className="flex flex-col gap-[30px] text-white">
           <h3 className="md:text-[40px] sm:text-[30px] sm:leading-[15px] md:leading-[28px]">TermoGroup Almaty</h3>
           <div className="text-[15px] leading-[28px]">

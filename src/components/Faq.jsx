@@ -56,7 +56,7 @@ export const Faq = () => {
     };
 
     return (
-        <div className="sm:px-[10px] md:mx-[15vw] ">
+        <div className="sm:px-[10px] lg:px-[5vw] 2xl:px-[15vw] ">
             <h2 className="sm:text-[40px] sm:text-center sm:leading-[35px]  md:text-[64px] md:leading-[74px] my-[60px]">Частые вопросы</h2>
             <div className="grid sm:grid-cols-1 md:grid-cols-3 gap-[32px]">
                 {questions.map((item, index) => {

@@ -54,7 +54,7 @@ export const SpecialOffers = () => {
     }, []);
 
     return (
-        <div className='mt-[65px] md:px-[15vw] sm:px-[10px]'>
+        <div className='mt-[65px] lg:px-[5vw] 2xl:px-[15vw] sm:px-[10px]'>
             <div className='text-center mb-8'>
                 <h2 className='md:text-[64px] md:leading-[74px] sm:text-[35px] md:mb-[20px] sm:leading-[43px]'>Спецпредложения</h2>
                 <p className='sm:text-[20px] leading-[20px] sm:leading-[23px] text-gray-600'>

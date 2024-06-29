@@ -86,7 +86,7 @@ export const CalculatedSection = () => {
   return (
       <motion.section
           ref={ref}
-          className="flex sm:pb-[50px] md:min-h-[800px] sm:px-[10px] md:px-[15vw] sm:pt-[20px] md:pt-[50px] bg-gray_dark gap-[20px] justify-between relative"
+          className="flex sm:pb-[50px] md:min-h-[800px] sm:px-[10px] lg:px-[5vw] 2xl:px-[15vw] sm:pt-[20px] md:pt-[50px] bg-gray_dark gap-[20px] justify-between relative"
           initial="hidden"
           animate={isInView ? "visible" : "hidden"}
           variants={{

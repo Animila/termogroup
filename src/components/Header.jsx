@@ -46,9 +46,9 @@ export const HeaderSection = () => {
       <motion.section
           initial="hidden"
           animate="visible"
-          className="sm:px-[30px] sm:pt-[90px] lg:mx-[5vw] 2xl:mx-[15vw] pb-[70px] md:mt-[100px] block bg-white relative"
+          className="sm:px-[30px] sm:pt-[90px] lg:mx-[5vw] 2xl:mx-[15vw] pb-[70px] md:pt-[50px] block bg-white relative"
       >
-        <div className="absolute lg:right-[20px] md:right-0 md:top-[70px] md:translate-x-0 md:overflow-x-visible md:h-[450px] sm:right-[50%] sm:top-[450px] sm:translate-x-[20%] z-0">
+        <div className="absolute lg:right-[20px] md:right-0 md:top-[150px] md:translate-x-0 md:overflow-x-visible md:h-[450px] sm:right-[50%] sm:top-[450px] sm:translate-x-[20%] z-0">
           <motion.div
               initial="hidden"
               animate="visible"
@@ -97,10 +97,10 @@ export const HeaderSection = () => {
             animate="visible"
             variants={textVariants}
             viewport={{ once: true }}
-            className="pt-[100px] z-10"
+            className="pt-[100px] z-10 relative"
         >
           <span className="block sm:text-[22px] md:text-[23px] font-bold">Фасадные панели</span>
-          <h1 className="block sm:text-[27px] md:text-[60px] font-bold sm:leading-[25px] md:leading-[70px] text-main_one sm:mt-[10px] md:mt-[29px]">№1 производитель <br/> термопанелей на<br></br> мраморно-полимерной<br/> основе по турецкой <br/> технологии</h1>
+          <h1 className="block sm:text-[27px] md:text-[50px] font-bold sm:leading-[25px] md:leading-[50px] text-main_one sm:mt-[10px] md:mt-[29px]">№1 производитель <br/> термопанелей на<br></br> мраморно-полимерной<br/> основе по турецкой <br/> технологии</h1>
           <span className="block sm:text-[22px] md:text-[23px] font-bold sm:mt-[15px] md:mt-[39px]"> созданы дарить тепло!</span>
         </motion.div>
         <motion.div

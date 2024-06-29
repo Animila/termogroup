@@ -82,7 +82,19 @@ export const Contacts = () => {
                     <Image src={'/images/manager.png'} alt="Евген" className="w-[350px]" width={400} height={500} />
                 </div>
                 <div>
-                    <h2 className="sm:text-[35px] md:text-[49px] leading-[50px] mb-4 ">
+                    <div className='flex justify-center items-center z-0 rounded-full overflow-hidden'>
+                        <Image
+                            src="/images/managerCircle.png" // Путь к вашему изображению
+                            alt="Ернур"
+                            width={220}
+                            height={220}
+                            style={{
+                                objectFit: "cover",
+                                borderRadius: "200px", //👈 and here you can select border radius
+                            }}
+                        />
+                    </div>
+                    <h2 className="sm:text-[35px] md:text-[49px] leading-[50px] mb-4 sm:text-center md:text-start">
                         Отвечу на любые<br /> вопросы по телефону
                     </h2>
                     <div className='text-main_one flex flex-row gap-[11px]'>

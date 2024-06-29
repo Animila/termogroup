@@ -3,6 +3,7 @@ import {Footer} from "@/components/Footer";
 import {Menu} from "@/components/Menu";
 import {ModalProvider} from "@/contexts/ModalContext";
 import localFont from "next/font/local";
+import Head from "next/head";
 
 const proximaNova = localFont({src: [
         {
@@ -32,15 +33,23 @@ const proximaNova = localFont({src: [
     ]})
 
 export const metadata = {
-  title: "TermoGroup",
-  description: "Фасадные панели TermoGroup - созданы дарить тепло!",
+    title: "TermoGroup",
+    description: "Фасадные панели TermoGroup - созданы дарить тепло!",
+    icons: {
+        icon: '/favicon/favicon.ico',
+        shortcut: '/favicon/favicon.ico',
+        apple: '/favicon/apple-touch-icon.png',
+        other: {
+            rel: 'apple-touch-icon',
+            url: '/favicon/apple-touch-icon.png',
+        },
+    }
 };
 
 export default function RootLayout({ children }) {
   return (
       <ModalProvider>
         <html lang="ru">
-
         <body className={`${proximaNova.className} relative`}>
 
         <Menu/>

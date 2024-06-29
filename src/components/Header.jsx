@@ -46,7 +46,7 @@ export const HeaderSection = () => {
       <motion.section
           initial="hidden"
           animate="visible"
-          className="sm:px-[10px] sm:mt-[20px] lg:mx-[5vw] 2xl:mx-[15vw] pb-[70px] md:mt-[100px] block bg-white relative"
+          className="sm:px-[30px] sm:pt-[90px] lg:mx-[5vw] 2xl:mx-[15vw] pb-[70px] md:mt-[100px] block bg-white relative"
       >
         <div className="absolute lg:right-[20px] md:right-0 md:top-[70px] md:translate-x-0 md:overflow-x-visible md:h-[450px] sm:right-[50%] sm:top-[450px] sm:translate-x-[20%] z-0">
           <motion.div
@@ -99,16 +99,16 @@ export const HeaderSection = () => {
             viewport={{ once: true }}
             className="pt-[100px] z-10"
         >
-          <span className="block sm:text-[25px] md:text-[28px] font-bold">Фасадные панели</span>
-          <h1 className="block sm:text-[40px] md:text-[60px] font-black sm:leading-[30px] md:leading-[70px] text-main_one sm:mt-[10px] md:mt-[29px]">№1 производитель <br/> термопанелей<br></br> на мраморно-<br/>полимерной основе<br/> по турецкой технологии</h1>
-          <span className="block sm:text-[25px] md:text-[28px] font-bold sm:mt-[15px] md:mt-[39px]">- созданы дарить тепло!</span>
+          <span className="block sm:text-[22px] md:text-[23px] font-bold">Фасадные панели</span>
+          <h1 className="block sm:text-[27px] md:text-[60px] font-bold sm:leading-[25px] md:leading-[70px] text-main_one sm:mt-[10px] md:mt-[29px]">№1 производитель <br/> термопанелей на<br></br> мраморно-полимерной<br/> основе по турецкой <br/> технологии</h1>
+          <span className="block sm:text-[22px] md:text-[23px] font-bold sm:mt-[15px] md:mt-[39px]"> созданы дарить тепло!</span>
         </motion.div>
         <motion.div
             initial="hidden"
             animate="visible"
             variants={textVariants}
             viewport={{ once: true }}
-            className="md:pt-[64px] sm:pt-[150px] flex sm:flex-col sm:gap-[10px] md:flex-row md:gap-[30px] z-10"
+            className="md:pt-[64px] sm:pt-[200px] flex sm:flex-col sm:gap-[10px] md:flex-row md:gap-[30px] z-10"
         >
           <div className="h-[100px] sm:gap-[20px] md:gap-0 sm:border-b-2 sm:border-b-accent_one md:border-0 md:w-[188px] flex md:flex-col sm:flex-row sm:justify-start md:justify-start md:items-start sm:items-center">
             <div className="text-[29px] leading-[38px] font-bold w-[50px]">32</div>

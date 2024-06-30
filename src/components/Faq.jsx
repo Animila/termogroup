@@ -57,7 +57,7 @@ export const Faq = () => {
 
     return (
         <div className="sm:px-[10px] lg:px-[5vw] 2xl:px-[15vw] ">
-            <h2 className="sm:text-[40px] sm:text-center sm:leading-[35px]  md:text-[64px] md:leading-[74px] my-[60px]">Частые вопросы</h2>
+            <h2 className="sm:text-[40px] font-bold sm:text-center sm:leading-[35px]  md:text-[64px] md:leading-[74px] my-[60px]">Частые вопросы</h2>
             <div className="grid sm:grid-cols-1 md:grid-cols-3 gap-[32px]">
                 {questions.map((item, index) => {
                     const [ref, isInView] = useInView({ threshold: 0.1 });
@@ -73,12 +73,12 @@ export const Faq = () => {
                             }}
                             className='flex flex-col'
                         >
-                            <div className="bg-accent_two rounded-br-[40px] rounded-tr-[40px] rounded-tl-[40px] rounded-bl-0 px-[45px] py-[22px] h-[118px] flex justify-center items-center text-[18px] leading-[24px]">
+                            <div className="bg-accent_two rounded-br-[40px] rounded-tr-[40px] rounded-tl-[40px] rounded-bl-0 sm:px-[33px] sm:py-[15px] md:px-[45px] md:py-[22px] md:h-[118px] flex justify-center items-center font-bold sm:text-[13px] md:text-[18px] md:leading-[24px]">
                                 {item.question}
                             </div>
                             <button
                                 onClick={() => handleQuestionClick(index)}
-                                className="bg-main_three rounded-br-[40px] rounded-tr-[40px] rounded-tl-[40px] rounded-bl-0 px-[40px] py-[18px] w-fit text-white text-[18px] leading-[22px] mt-[8px]"
+                                className="bg-main_three rounded-br-[40px] rounded-tr-[40px] rounded-tl-[40px] rounded-bl-0 sm:py-[10px] sm:px-[30px] md:px-[40px] md:py-[18px] w-fit text-white sm:text-[12px] md:text-[18px] leading-[22px] mt-[8px]"
                             >
                                 Ответ
                             </button>

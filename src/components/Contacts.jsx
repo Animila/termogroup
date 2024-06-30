@@ -75,14 +75,16 @@ export const Contacts = () => {
                 hidden: { opacity: 0, y: 50 },
                 visible: { opacity: 1, y: 0, transition: { duration: 0.5 } }
             }}
-            className="bg-gray-100 rounded-md lg:px-[5vw] 2xl:px-[15vw] sm:px-[10px] md:mt-[100px] sm:mt-[40px]"
+            className="bg-gray-100 rounded-md lg:px-[5vw] 2xl:px-[15vw] sm:px-[10px] md:mt-[100px] sm:mt-[40px] sm:mb-[20px]"
         >
             <div className="grid md:grid-cols-2 sm:grid-cols-1 gap-4 items-center">
                 <div className='flex justify-center items-end sm:hidden md:block'>
                     <Image src={'/images/manager.png'} alt="Евген" className="w-[350px]" width={400} height={500} />
                 </div>
                 <div>
-                    <div className='sm:block md:hidden flex justify-center items-center z-0 rounded-full overflow-hidden'>
+                    <div className='sm:block md:hidden flex justify-center items-center z-0 rounded-full overflow-hidden' style={{
+                        textAlign: '-webkit-center'
+                    }}>
                         <Image
                             src="/images/managerCircle.png" // Путь к вашему изображению
                             alt="Ернур"
@@ -94,10 +96,10 @@ export const Contacts = () => {
                             }}
                         />
                     </div>
-                    <h2 className="sm:text-[35px] md:text-[49px] leading-[50px] mb-4 sm:text-center md:text-start">
+                    <h2 className="sm:mt-[20px] md:mt-0 sm:text-[32px] md:text-[49px] font-bold sm:leading-[100%] md:leading-[50px] md:mb-4 sm:text-center md:text-start">
                         Отвечу на любые<br /> вопросы по телефону
                     </h2>
-                    <div className='text-main_one flex flex-row gap-[11px]'>
+                    <div className='text-main_one flex flex-row gap-[11px] sm:mt-[20px]'>
                         <svg width="23" height="23" viewBox="0 0 23 23" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <g clipPath="url(#clip0_134_5995)">
                                 <path
@@ -113,13 +115,13 @@ export const Contacts = () => {
                             </defs>
                         </svg>
 
-                        <div className='text-[20px]'>За 5 минут разговора мы с вами:</div>
+                        <div className='sm:text-[16px] md:text-[20px] font-bold'>За 5 минут разговора мы с вами:</div>
                     </div>
 
-                    <ul className="list-disc pl-5 mb-4 text-[20px] mt-[19px]">
-                        <li>Подберем подходящий тип фасадных панелей</li>
-                        <li>Рассчитаем точную стоимость с учетом доставки</li>
-                        <li>Забронируем скидку 10% до конца апреля</li>
+                    <ul className="list-disc pl-5 mb-4 sm:text-[15px] font-bold md:text-[20px] mt-[19px] ">
+                        <li className='sm:mt-[15px] md:mt-0'>Подберем подходящий тип фасадных панелей</li>
+                        <li className='sm:mt-[15px] md:mt-0'>Рассчитаем точную стоимость с учетом доставки</li>
+                        <li className='sm:mt-[15px] md:mt-0'>Забронируем скидку 10% до конца апреля</li>
                     </ul>
 
                     <div className="mt-[30px]">
@@ -130,13 +132,13 @@ export const Contacts = () => {
                         ) : (
                             <form onSubmit={handleSubmit(onSubmit)} className="space-y-4">
                                 <div className="flex border-gray border-[1px]">
-                                    <label htmlFor="phone" className="flex justify-center items-center px-[31px] py-[24px] md:w-[78px]">
+                                    <label htmlFor="phone" className="flex justify-center items-center sm:p-[15px] md:px-[31px] md:py-[24px] md:w-[78px]">
                                         <PhoneSVG color={'black'} />
                                     </label>
                                     <InputMask
                                         id="phone"
                                         type="text"
-                                        className="w-full bg-transparent text-black text-[17px] outline-0"
+                                        className="w-full bg-transparent text-black outline-0 md:text-[17px] sm:text-[14px] leading-[17px] rounded-[10px] py-[10px]"
                                         mask="+7(999)999-99-99"
                                         maskChar=" "
                                         placeholder="Введите телефон"
@@ -144,30 +146,30 @@ export const Contacts = () => {
                                     />
                                 </div>
                                 <div className="flex border-gray border-[1px] mt-4">
-                                    <label htmlFor="text" className="flex justify-center items-center px-[31px] py-[24px] md:w-[78px]">
+                                    <label htmlFor="text" className="flex justify-center items-center sm:p-[15px] md:px-[31px] md:py-[24px] md:w-[78px]">
                                         <EmailSVG />
                                     </label>
                                     <textarea
                                         id="text"
                                         placeholder="Введите сообщение или вопрос. Поле можно пропустить."
                                         {...register('text')}
-                                        className="w-full bg-transparent text-black text-[17px] outline-0"
+                                        className="w-full bg-transparent text-black outline-0 md:text-[17px] sm:text-[14px] leading-[17px] h-[60px] rounded-[10px] py-[10px]"
                                     />
                                 </div>
                                 <div className="mt-[27px] flex md:flex-row sm:flex-col items-center gap-[30px]">
                                     <button
                                         disabled={!active}
                                         type={'submit'}
-                                        className={`flex ${active ? 'bg-main_one text-white' : 'bg-gray text-accent_one'} justify-center items-center w-[358px] h-[60px] rounded-[100px] gap-[10px]`}
+                                        className={`flex ${active ? 'bg-main_one text-white' : 'bg-gray text-accent_one'} justify-center items-center sm:px-[50px] md:px-0 sm:py-[8px] md:py-0 md:w-[358px] md:h-[60px] rounded-[100px] gap-[10px]`}
                                     >
                                         {isLoading ? (
                                             <div className="loader border-t-transparent border-4 border-white rounded-full w-5 h-5 mx-auto animate-spin"></div>
                                         ) : (
-                                            <span className="text-[19px] leading-[24px]">Получить консультацию</span>
+                                            <span className="sm:text-[14px] md:text-[19px] leading-[24px]">Получить консультацию</span>
                                         )}
                                     </button>
 
-                                    <span className="text-accent_one text-wrap text-[13px] leading-[16px] w-[255px] ">
+                                    <span className="text-accent_one text-wrap sm:text-[14px] md:text-[13px] md:leading-[16px] w-[255px] ">
                                     Нажимая на кнопку, вы даете согласие
                                     <a href="/terms" className="underline"> на обработку персональных данных</a>
                                 </span>
@@ -175,7 +177,7 @@ export const Contacts = () => {
                             </form>
                         )}
                     </div>
-                    <div className="flex flex-row items-center mt-[53px]">
+                    <div className="flex flex-row items-center mt-[53px] sm:hidden md:block ">
                         <PhoneSVG color={'#F22F05'} />
                         <a href="tel:+77772096800" className="ml-[10px] sm:text-[17px] md:text-[22px]">+7 777 209 68 00</a>
                     </div>

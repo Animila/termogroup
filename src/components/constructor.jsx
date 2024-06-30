@@ -72,17 +72,21 @@ export const Constructor = () => {
   const [ref2, isInView2] = useInView({ threshold: 0.1 });
 
   return (
-      <div className="bg-light_black sm:pt-[50px] md:pt-[84px] lg:px-[5vw] 2xl:px-[15vw] xl:pt-[84px] pb-[100px] sm:px-[10px]">
-        <h2 className="md:font-bold sm:text-[35px] sm:leading-[43px] md:text-[64px] md:leading-[66px] text-center text-white">
+      <div className="bg-light_black sm:pt-[50px] md:pt-[84px] lg:px-[5vw] 2xl:px-[15vw] xl:pt-[84px] sm:pb-[20px] md:pb-[100px] sm:px-[10px]">
+        <h2 className="md:font-bold sm:text-[27px] sm:leading-[100%] font-bold md:text-[64px] md:leading-[66px] text-center text-white">
           Простая и надежная
           <br />
           <span className="text-main_one">конструкция на ваш выбор</span>
         </h2>
-        <div className="w-full grid grid-cols-12 items-center sm:mt-[60px] md:mt-[137px]">
+
+
+
+
+        <div className="w-full grid grid-cols-12 items-center sm:mt-[35px] md:mt-[137px]">
           <div className="w-full sm:col-span-2 md:col-span-4 bg-gray h-[4px]" />
-          <div className="w-full sm:col-span-8 md:col-span-4 h-[20px] flex items-center justify-center gap-[16px]">
-            <Image src="/icons/layer1.svg" width={40} height={48} alt="1 слой" />
-            <span className="text-[30px] leading-[43px] text-main_one font-bold">СЛОЙ</span>
+          <div className="w-full sm:col-span-8 md:col-span-4 h-[20px] flex items-center justify-center sm:gap-[11px] md:gap-[16px]">
+            <Image src="/icons/layer1.svg" width={40} height={48} alt="1 слой" className='sm:scale-[0.6] md:scale-0' />
+            <span className="sm:text-[20px] md:text-[30px] leading-[43px] text-main_one font-bold">СЛОЙ</span>
           </div>
           <div className="w-full sm:col-span-2 md:col-span-4 bg-gray h-[4px]" />
         </div>
@@ -94,11 +98,11 @@ export const Constructor = () => {
               hidden: { opacity: 0, y: 50 },
               visible: { opacity: 1, y: 0, transition: { duration: 0.5 } }
             }}
-            className="w-full grid sm:grid-cols-1 md:grid-cols-2 sm:mt-[60px] md:mt-[137px] sm:gap-[30px]"
+            className="w-full grid sm:grid-cols-1 md:grid-cols-2 sm:mt-[26px] md:mt-[137px] sm:gap-[30px]"
         >
-          <div className='flex flex-col gap-[50px]'>
+          <div className='flex flex-col md:gap-[50px]'>
             <div className='flex justify-center'>
-              <Image className={'sm:w-full sm:h-[300px] md:max-h-[343px]'} width={500} height={343} src={layout1[selectedIndex1].image} alt={'Слой'} />
+              <Image className={'sm:scale-[0.8] sm:h-[300px] md:max-h-[343px]'} width={500} height={343} src={layout1[selectedIndex1].image} alt={'Слой'} />
             </div>
             <div className='flex flex-row justify-center gap-[22px]'>
               <button
@@ -121,20 +125,22 @@ export const Constructor = () => {
               </button>
             </div>
           </div>
-          <div className="text-white flex flex-col sm:items-center md:items-start">
-            <Image src="/images/constructorLayer1.png" alt="пример" width={135} height={110} />
-            <h3 className="sm:text-center mt-[36px] text-[29px] leading-[35px]">Декоративный слой</h3>
-            <p className="mt-[23px] text-[19px] leading-[24px] text-accent_one sm:text-center md:text-start">
-              Мы можем комбинировать имеющиеся у нас 12 цветов, которые позволят отличить фасад от других домов
-            </p>
+          <div className="text-white sm:gap-[20px] sm:grid sm:grid-cols-3 md:flex md:flex-col sm:items-center md:items-start">
+            <Image src="/images/constructorLayer1.png" alt="пример" width={135} height={110} objectFit className='w-[135px]' />
+           <div className="sm:col-span-2">
+             <h3 className="md:mt-[36px] md:text-[29px] md:leading-[35px] sm:text-[16px] sm:font-bold">Декоративный слой</h3>
+             <p className="sm:mt-[10px] md:mt-[23px] sm:text-[10px] md:text-[19px] sm:leading-[12px] md:leading-[24px] font-semibold text-accent_one md:text-start">
+               Мы можем комбинировать имеющиеся у нас 12 цветов, которые позволят отличить фасад от других домов
+             </p>
+           </div>
           </div>
         </motion.div>
 
-        <div className="w-full grid grid-cols-12 items-center sm:mt-[60px] md:mt-[137px]">
+        <div className="w-full grid grid-cols-12 items-center sm:mt-[35px] md:mt-[137px]">
           <div className="w-full sm:col-span-2 md:col-span-4 bg-gray h-[4px]" />
-          <div className="w-full sm:col-span-8 md:col-span-4 h-[20px] flex items-center justify-center gap-[16px]">
-            <Image src="/icons/layer2.svg" width={40} height={48} alt="1 слой" />
-            <span className="text-[30px] leading-[43px] text-main_one font-extrabold">СЛОЙ</span>
+          <div className="w-full sm:col-span-8 md:col-span-4 h-[20px] flex items-center justify-center sm:gap-[11px] md:gap-[16px]">
+            <Image src="/icons/layer2.svg" width={40} height={48} alt="1 слой" className='sm:scale-[0.6] md:scale-0' />
+            <span className="sm:text-[20px] md:text-[30px] leading-[43px] text-main_one font-bold">СЛОЙ</span>
           </div>
           <div className="w-full sm:col-span-2 md:col-span-4 bg-gray h-[4px]" />
         </div>
@@ -146,11 +152,11 @@ export const Constructor = () => {
               hidden: {opacity: 0, y: 50},
               visible: {opacity: 1, y: 0, transition: {duration: 0.5}}
             }}
-            className="w-full grid sm:grid-cols-1 md:grid-cols-2 md:mt-[130px] sm:mt-[60px] sm:gap-[30px]"
+            className="w-full grid sm:grid-cols-1 md:grid-cols-2 sm:mt-[26px] md:mt-[130px] sm:gap-[30px]"
         >
           <div className='flex flex-col gap-[50px]'>
             <div className='flex justify-center'>
-              <Image className={'sm:w-full sm:h-[300px] md:max-h-[343px]'} width={500} height={343}
+              <Image className={'sm:scale-[0.8] sm:h-[300px] md:max-h-[343px]'} width={500} height={343}
                      src={layout2[selectedIndex2].image} alt={'Слой'}/>
             </div>
             <div className='flex flex-row justify-center gap-[22px]'>
@@ -173,12 +179,14 @@ export const Constructor = () => {
               </button>
             </div>
           </div>
-          <div className="text-white flex flex-col sm:items-center md:items-start">
-            <Image src="/images/constructorLayer2.png" alt="пример" width={135} height={110}/>
-            <h3 className="mt-[36px] text-[29px] leading-[35px]">Слой фактуры</h3>
-            <p className="mt-[23px] text-[19px] leading-[24px] text-accent_one sm:text-center md:text-start">
-              Мы производим 4 варианта фактуры. Каждый имеет свои преимущества.
-            </p>
+          <div className="text-white sm:gap-[20px] sm:grid sm:grid-cols-3 md:flex md:flex-col sm:items-center md:items-start">
+            <Image src="/images/constructorLayer2.png" alt="пример" width={135} height={110} objectFit className='w-[135px]' />
+            <div className="sm:col-span-2">
+              <h3 className="md:mt-[36px] md:text-[29px] md:leading-[35px] sm:text-[16px] sm:font-bold">Слой фактуры</h3>
+              <p className="sm:mt-[10px] md:mt-[23px] sm:text-[10px] md:text-[19px] sm:leading-[12px] md:leading-[24px] font-semibold text-accent_one md:text-start">
+                Мы производим 4 варианта фактуры. Каждый имеет свои преимущества.
+              </p>
+            </div>
           </div>
         </motion.div>
       </div>

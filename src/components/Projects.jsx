@@ -46,18 +46,18 @@ export const Projects = () => {
     return (
         <div className='lg:px-[5vw] 2xl:px-[15vw] sm:px-[10px] mt-[65px]'>
             <div className='flex md:flex-row justify-between sm:flex-col'>
-                <h3 className='sm:text-[29px] md:text-[39px] sm:leading-[33px] md:leading-[43px]'>
+                <h3 className='sm:text-[20px] md:text-[39px] sm:leading-[108%] font-bold md:leading-[43px]'>
                     Реализовано<br />
                     <span className='text-main_one '>900 объектов</span> с 2019 года
                 </h3>
-                <div className='flex flex-row md:gap-[100px]'>
+                <div className='flex flex-row sm:justify-around md:gap-[100px] sm:mt-[20px] md:m-0'>
                     <div className='flex flex-col'>
-                        <div className='sm:text-[46px] md:text-[56px] leading-[64px]'>900</div>
-                        <div className=' md:text-[20px] leading-[23px]'>Частных объектов</div>
+                        <div className='sm:text-[30px] md:text-[56px] sm:leading-[108%] md:leading-[64px]'>900</div>
+                        <div className='sm:text-[12px] md:text-[20px] md:leading-[23px] font-bold'>Частных объектов</div>
                     </div>
                     <div className='flex flex-col'>
-                        <div className='sm:text-[46px] md:text-[56px] leading-[64px]'>90</div>
-                        <div className='text-[20px] leading-[23px]'>Коммерческих объектов</div>
+                        <div className='sm:text-[30px] md:text-[56px] sm:leading-[108%] md:leading-[64px]'>90</div>
+                        <div className='sm:text-[12px] md:text-[20px] md:leading-[23px] font-bold'>Коммерческих объектов</div>
                     </div>
                 </div>
             </div>

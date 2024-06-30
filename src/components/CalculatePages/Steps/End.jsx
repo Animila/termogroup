@@ -16,7 +16,7 @@ export const EndPageCalculate = ({setStep, register, watch, setValue, isLoading}
   }, [watch('name'), watch('phone')])
 
   return  <motion.div
-      className="mt-[50px] flex flex-col gap-[20px] relative h-full"
+      className="sm:mt-[20px] md:mt-[50px] flex flex-col gap-[20px] relative h-full"
       initial="hidden"
       animate="visible"
       variants={{
@@ -25,10 +25,10 @@ export const EndPageCalculate = ({setStep, register, watch, setValue, isLoading}
       }}
   >
 
-      <div className="text-white md:text-[35px] leading-[24px] font-bold">Как вам удобнее получить расчет и скидку?
+      <div className="text-white sm:text-[18px] font-bold md:text-[25px] md:leading-[32px]">Как вам удобнее получить расчет и скидку?
       </div>
       <div className="sm:w-full md:w-[650px]">
-        <div className="flex w-full flex-row mt-[30px]">
+        <div className="flex w-full flex-row sm:mt-[15px] md:mt-[30px]">
           <div
               onClick={() => setValue('social', 'telephone')}
               className={`flex ${watch('social') === 'telephone' ? 'bg-main_one' : 'bg-gray'} active:bg-main_one hover:bg-gray_dark justify-center items-center gap-[15px] w-full h-[70px] cursor-pointer`}>
@@ -59,7 +59,7 @@ export const EndPageCalculate = ({setStep, register, watch, setValue, isLoading}
             <label htmlFor="name" className="flex justify-center items-center px-[31px] py-[24px] md:w-[78px]">
               <PeopleSVG/>
             </label>
-            <input id={"name"} type="text" className="w-full bg-transparent text-white text-[17px] outline-0"
+            <input id={"name"} type="text" className="text-[14px] leading-[17px] w-full text-white bg-transparent outline-0"
                    placeholder="Как к вам обращаться?"
                    {...register('name')}
             />
@@ -69,7 +69,7 @@ export const EndPageCalculate = ({setStep, register, watch, setValue, isLoading}
               <PhoneSVG color={"white"}/>
             </label>
             <InputMask id={"phone"} placeholder="Введите свой номер телефона" {...register('phone')}
-                       className="w-full bg-transparent text-white text-[17px] outline-0" mask="+7(999)999-99-99"
+                       className="text-[14px] leading-[17px] w-full text-white bg-transparent outline-0" mask="+7(999)999-99-99"
                        maskChar=" "/>;
           </div>
         </div>

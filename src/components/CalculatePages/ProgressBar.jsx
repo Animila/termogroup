@@ -20,7 +20,7 @@ export const ProgressBar = ({step}) => {
         }
     }, [step])
 
-    return <div  className={"text-white relative mt-[50px]"}>
+    return <div  className={"text-white relative sm:mt-[30px] md:mt-[50px]"}>
         <ul ref={listRef} className="flex flex-row justify-between items-center before:h-[2px] before:w-[100%] z-10 before:z-0 before:absolute before:t-[50%] before:bg-gray">
             <li className="flex bg-main_one sm:w-[20px] sm:h-[20px] md:w-[40px] md:h-[40px] items-center justify-center rounded-3xl z-10">
                 <span className="sm:hidden md:block">1</span>

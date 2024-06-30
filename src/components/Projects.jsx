@@ -89,12 +89,12 @@ export const Projects = () => {
                                 </button>
                             </div>
                             <div className='p-4'>
-                                <div className='text-[16px] leading-[19px]'>Утепление</div>
-                                <div className='text-[24px] leading-[28px]'>{item.type.sm} см²</div>
-                                <div className='text-[16px] leading-[19px]'>Цена за м²</div>
-                                <div className='text-[24px] leading-[28px]'>{item.type.price}</div>
-                                <div className='text-[16px] leading-[19px] mt-4'>Итоговая цена</div>
-                                <div className='text-[24px] leading-[28px] text-main_one'>{item.price}</div>
+                                <div className='text-[12px] font-bold '>Утепление</div>
+                                <div className='text-[16px] font-bold '>{item.type.sm} см²</div>
+                                <div className='text-[12px] font-bold mt-2'>Цена за м²</div>
+                                <div className='text-[16px] font-bold'>{item.type.price}</div>
+                                <div className='text-[12px] font-bold mt-4'>Итоговая цена</div>
+                                <div className='text-[16px] font-bold text-main_one'>{item.price}</div>
                             </div>
                         </motion.div>
                     );

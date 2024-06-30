@@ -108,17 +108,17 @@ export const HeaderSection = () => {
             animate="visible"
             variants={textVariants}
             viewport={{ once: true }}
-            className="md:pt-[64px] sm:pt-[200px] flex sm:flex-col sm:gap-[10px] md:flex-row md:gap-[30px] z-10"
+            className="md:pt-[64px] sm:pt-[200px] flex sm:flex-col sm:gap-[5px] md:flex-row md:gap-[30px] z-10"
         >
-          <div className="h-[100px] sm:gap-[20px] md:gap-0 sm:border-b-2 sm:border-b-accent_one md:border-0 md:w-[188px] flex md:flex-col sm:flex-row sm:justify-start md:justify-start md:items-start sm:items-center">
+          <div className="sm:py-[5px] md:h-[100px] sm:gap-[20px] md:gap-0 sm:border-b-2 sm:border-b-accent_one md:border-0 md:w-[188px] flex md:flex-col sm:flex-row sm:justify-start md:justify-start md:items-start sm:items-center">
             <div className="text-[29px] leading-[38px] font-bold w-[50px]">32</div>
             <div className="text-[15px] leading-[19px] mt-[4px] sm:w-[200px] font-semibold md:text-[#a1a1a1]">фактура декоративных панелей на выбор</div>
           </div>
-          <div className="h-[100px] sm:gap-[20px] md:gap-0 sm:border-b-2 sm:border-b-accent_one md:border-0 md:w-[188px] flex md:flex-col sm:flex-row sm:justify-start md:justify-start md:items-start sm:items-center">
+          <div className="sm:py-[5px] md:h-[100px] sm:gap-[20px] md:gap-0 sm:border-b-2 sm:border-b-accent_one md:border-0 md:w-[188px] flex md:flex-col sm:flex-row sm:justify-start md:justify-start md:items-start sm:items-center">
             <div className="text-[29px] leading-[38px] font-bold w-[50px]">365</div>
             <div className="text-[15px] leading-[19px] mt-[4px] sm:w-[200px] font-semibold md:text-[#a1a1a1]">дней в году фасадные панели пригодны для монтажа</div>
           </div>
-          <div className="h-[100px] sm:gap-[20px] md:gap-0 md:w-[188px] flex md:flex-col sm:flex-row sm:justify-start md:items-start sm:items-center">
+          <div className="sm:py-[5px] md:h-[100px] sm:gap-[20px] md:gap-0 md:w-[188px] flex md:flex-col sm:flex-row sm:justify-start md:items-start sm:items-center">
             <div className="text-[29px] leading-[38px] font-bold w-[50px]">{">"}4</div>
             <div className="text-[15px] leading-[19px] mt-[4px] sm:w-[200px] font-semibold md:text-[#a1a1a1]">килограмм вес одной монтажной плиты</div>
           </div>

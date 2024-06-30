@@ -27,7 +27,7 @@ const OfferItem = ({ offer, index }) => {
                 {/*<Image src={offer.image} alt={offer.title} layout='fill' objectFit='cover' />*/}
             </div>
             <div className='relative z-10 p-4'>
-                <h3 className='text-[24px] sm:text-[32px] leading-[28px] sm:leading-[36px] font-bold'>{offer.title}</h3>
+                <h3 className='text-[24px] sm:text-[32px] leading-[28px] sm:leading-[36px] font-bold sm:text-center md:text-start'>{offer.title}</h3>
                 <p className='text-[16px] sm:text-[20px] leading-[20px] sm:leading-[24px]'>{offer.description}</p>
                 <div className='mt-4'>
                     <div className='flex items-center'>

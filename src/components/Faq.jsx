@@ -56,8 +56,8 @@ export const Faq = () => {
     };
 
     return (
-        <div className="sm:px-[10px] lg:px-[5vw] 2xl:px-[15vw] ">
-            <h2 className="sm:text-[40px] font-bold sm:text-center sm:leading-[35px]  md:text-[64px] md:leading-[74px] my-[60px]">Частые вопросы</h2>
+        <div className="sm:px-[20px] lg:px-[5vw] 2xl:px-[15vw] ">
+            <h2 className="sm:text-[40px] font-bold sm:text-center sm:leading-[35px]  md:text-[64px] md:leading-[74px] sm:mt-[65px] sm:mb-[30px] md:my-[60px]">Частые вопросы</h2>
             <div className="grid sm:grid-cols-1 md:grid-cols-3 gap-[32px]">
                 {questions.map((item, index) => {
                     const [ref, isInView] = useInView({ threshold: 0.1 });

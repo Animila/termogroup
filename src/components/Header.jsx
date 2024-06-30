@@ -108,7 +108,7 @@ export const HeaderSection = () => {
             animate="visible"
             variants={textVariants}
             viewport={{ once: true }}
-            className="md:pt-[64px] sm:pt-[200px] flex sm:flex-col sm:gap-[5px] md:flex-row md:gap-[30px] z-10"
+            className="md:pt-[64px] sm:pt-[250px] flex sm:flex-col sm:gap-[5px] md:flex-row md:gap-[30px] z-10"
         >
           <div className="sm:py-[5px] md:h-[100px] sm:gap-[20px] md:gap-0 sm:border-b-2 sm:border-b-accent_one md:border-0 md:w-[188px] flex md:flex-col sm:flex-row sm:justify-start md:justify-start md:items-start sm:items-center">
             <div className="text-[29px] leading-[38px] font-bold w-[50px]">32</div>

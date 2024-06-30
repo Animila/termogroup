@@ -13,7 +13,7 @@ export const Video = () => {
                 hidden: {opacity: 0, y: 50},
                 visible: {opacity: 1, y: 0, transition: {duration: 0.5}}
             }}>
-            <h2 className="sm:text-[30px] sm:text-center font-black sm:leading-[35px] md:text-[64px] md:leading-[74px] my-[20px] text-white">Подробнее
+            <h2 className="sm:text-[30px] sm:text-center sm:font-black md:font-bold sm:leading-[35px] md:text-[50px] my-[20px] text-white md:mb-[40px]">Подробнее
                 о наших термопанелях</h2>
             <iframe className='md:h-[315px] sm:h-[215px] sm:w-full md:w-[560px] mx-auto' width="560" height="315"
                     src="https://www.youtube.com/embed/mIKhgLqVtpw?si=rc3M9svJgv6IvP9P"

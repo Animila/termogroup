@@ -20,16 +20,16 @@ export const Meeting = () => {
         >
             <div className="w-full bg-white md:min-h-[500px] sm:py-[20px] md:grid md:grid-cols-12 sm:flex sm:flex-col-reverse sm:justify-between">
                 <div className="w-full sm:px-[10px] md:pl-[72px] sm:pt-[10px] md:pt-[45px] md:block sm:flex sm:items-center sm:flex-col md:col-span-7 span">
-                    <h3 className="text-main_one sm:text-[20px] md:text-[64px] sm:leading-0 md:leading-[76px] font-bold md:tracking-[-1.3px] w-full ">
+                    <h3 className="text-main_one sm:text-[20px] md:text-[60px] leading-[100%] font-black md:tracking-[-1px] w-full ">
                         Ознакомьтесь лично
                     </h3>
-                    <h4 className="md:text-[37px] sm:text-[16px] font-bold md:leading-[32px] md:mt-[10px] w-full ">
+                    <h4 className="md:text-[30px] sm:text-[16px] font-bold md:leading-[100%] md:mt-[10px] w-full ">
                         с каждым из вариантов
                     </h4>
-                    <p className="md:mt-[50px] sm:mt-[20px] font-semibold sm:text-[12px] sm:leading-[120%] md:text-[17px] md:leading-[22px] md:w-[550px] md:text-start">
+                    <p className="md:mt-[50px] sm:mt-[20px] font-semibold sm:text-[12px] sm:leading-[120%] md:text-[16px] md:leading-[22px] md:w-[550px] md:text-start">
                         Даже хорошие качественные фотографии не помогают принять окончательное решение.
                     </p>
-                    <p className="md:mt-[26px] sm:mt-[10px] font-semibold sm:text-[12px] sm:leading-[120%] md:text-[17px] md:leading-[22px] md:w-[550px]  md:text-start">
+                    <p className="md:mt-[26px] sm:mt-[10px] font-semibold sm:text-[12px] sm:leading-[120%] md:text-[16px] md:leading-[22px] md:w-[550px]  md:text-start">
                         У нас в офисе или на объекте вы сможете вживую оценить все фактуры и убедиться в качестве панелей.
                     </p>
                     <button

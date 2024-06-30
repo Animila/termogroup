@@ -56,8 +56,8 @@ export const SpecialOffers = () => {
     return (
         <div className='mt-[65px] lg:px-[5vw] 2xl:px-[15vw] sm:px-[10px]'>
             <div className='text-center mb-8'>
-                <h2 className='md:text-[64px] md:leading-[74px] sm:text-[24px] md:mb-[20px] sm:leading-[28px] font-bold'>Спецпредложения</h2>
-                <p className='sm:text-[24px] md:text-[64px] md:leading-[74px] sm:leading-[28px] text-gray-600 font-bold text-main_one'>
+                <h2 className='md:text-[64px] md:leading-[100%] sm:text-[24px] sm:leading-[28px] font-bold'>Спецпредложения</h2>
+                <p className='sm:text-[24px] md:text-[64px] md:leading-[100%] sm:leading-[28px] text-gray-600 font-bold text-main_one'>
                     и акции на фасадные панели TermoGroup
                 </p>
             </div>

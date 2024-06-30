@@ -75,7 +75,7 @@ export const Contacts = () => {
                 hidden: { opacity: 0, y: 50 },
                 visible: { opacity: 1, y: 0, transition: { duration: 0.5 } }
             }}
-            className="bg-gray-100 rounded-md lg:px-[5vw] 2xl:px-[15vw] sm:px-[10px] md:mt-[100px] sm:mt-[40px] sm:mb-[20px]"
+            className="bg-gray-100 rounded-md lg:px-[5vw] 2xl:px-[15vw] sm:px-[10px] md:mt-[100px] sm:mt-[40px] sm:mb-[20px] md:mb-0"
         >
             <div className="grid md:grid-cols-2 sm:grid-cols-1 gap-4 items-center">
                 <div className='flex justify-center items-end sm:hidden md:block'>
@@ -177,7 +177,7 @@ export const Contacts = () => {
                             </form>
                         )}
                     </div>
-                    <div className="flex flex-row items-center mt-[53px] sm:hidden md:block ">
+                    <div className="md:flex flex-row items-center mt-[53px] sm:hidden ">
                         <PhoneSVG color={'#F22F05'} />
                         <a href="tel:+77772096800" className="ml-[10px] sm:text-[17px] md:text-[22px]">+7 777 209 68 00</a>
                     </div>

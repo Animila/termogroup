@@ -85,7 +85,7 @@ export const Constructor = () => {
         <div className="w-full grid grid-cols-12 items-center sm:mt-[35px] md:mt-[137px]">
           <div className="w-full sm:col-span-2 md:col-span-4 bg-gray h-[4px]" />
           <div className="w-full sm:col-span-8 md:col-span-4 h-[20px] flex items-center justify-center sm:gap-[11px] md:gap-[16px]">
-            <Image src="/icons/layer1.svg" width={40} height={48} alt="1 слой" className='sm:scale-[0.6] md:scale-0' />
+            <Image src="/icons/layer1.svg" width={40} height={48} alt="1 слой" className='sm:scale-[0.6] md:scale-100' />
             <span className="sm:text-[20px] md:text-[30px] leading-[43px] text-main_one font-bold">СЛОЙ</span>
           </div>
           <div className="w-full sm:col-span-2 md:col-span-4 bg-gray h-[4px]" />
@@ -98,7 +98,7 @@ export const Constructor = () => {
               hidden: { opacity: 0, y: 50 },
               visible: { opacity: 1, y: 0, transition: { duration: 0.5 } }
             }}
-            className="w-full grid sm:grid-cols-1 md:grid-cols-2 sm:mt-[26px] md:mt-[137px] sm:gap-[30px]"
+            className="w-full grid sm:grid-cols-1 md:grid-cols-2 sm:mt-[26px] md:mt-[60px] sm:gap-[30px]"
         >
           <div className='flex flex-col md:gap-[50px]'>
             <div className='flex justify-center'>
@@ -136,10 +136,10 @@ export const Constructor = () => {
           </div>
         </motion.div>
 
-        <div className="w-full grid grid-cols-12 items-center sm:mt-[35px] md:mt-[137px]">
+        <div className="w-full grid grid-cols-12 items-center sm:mt-[35px] md:mt-[60px]">
           <div className="w-full sm:col-span-2 md:col-span-4 bg-gray h-[4px]" />
           <div className="w-full sm:col-span-8 md:col-span-4 h-[20px] flex items-center justify-center sm:gap-[11px] md:gap-[16px]">
-            <Image src="/icons/layer2.svg" width={40} height={48} alt="1 слой" className='sm:scale-[0.6] md:scale-0' />
+            <Image src="/icons/layer2.svg" width={40} height={48} alt="1 слой" className='sm:scale-[0.6] md:scale-100' />
             <span className="sm:text-[20px] md:text-[30px] leading-[43px] text-main_one font-bold">СЛОЙ</span>
           </div>
           <div className="w-full sm:col-span-2 md:col-span-4 bg-gray h-[4px]" />
@@ -152,7 +152,7 @@ export const Constructor = () => {
               hidden: {opacity: 0, y: 50},
               visible: {opacity: 1, y: 0, transition: {duration: 0.5}}
             }}
-            className="w-full grid sm:grid-cols-1 md:grid-cols-2 sm:mt-[26px] md:mt-[130px] sm:gap-[30px]"
+            className="w-full grid sm:grid-cols-1 md:grid-cols-2 sm:mt-[26px] md:mt-[60px] sm:gap-[30px]"
         >
           <div className='flex flex-col gap-[50px]'>
             <div className='flex justify-center'>

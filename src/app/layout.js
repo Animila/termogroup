@@ -3,7 +3,6 @@ import {Footer} from "@/components/Footer";
 import {Menu} from "@/components/Menu";
 import {ModalProvider} from "@/contexts/ModalContext";
 import localFont from "next/font/local";
-import Head from "next/head";
 
 const proximaNova = localFont({src: [
         {
@@ -47,17 +46,22 @@ export const metadata = {
 };
 
 export default function RootLayout({ children }) {
-  return (
-      <ModalProvider>
-        <html lang="ru">
-        <body className={`${proximaNova.className} relative`}>
 
-        <Menu/>
-        {children}
-        <Footer/>
-        </body>
-        </html>
-      </ModalProvider>
+    return (
+      <>
+          {/*<ScrollToAnchor />*/}
+          <ModalProvider>
+              <html lang="ru">
+              <body className={`${proximaNova.className} relative`}>
+
+              <Menu/>
+              {children}
+              <Footer/>
+              </body>
+              </html>
+          </ModalProvider>
+      </>
+
 
   );
 }

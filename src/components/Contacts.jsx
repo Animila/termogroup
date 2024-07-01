@@ -79,7 +79,7 @@ export const Contacts = () => {
         >
             <div className="grid md:grid-cols-2 sm:grid-cols-1 gap-4 items-center">
                 <div className='flex justify-center items-end sm:hidden md:block'>
-                    <Image src={'/images/manager.png'} alt="Евген" className="w-[350px]" width={400} height={500} />
+                    <Image src={'/images/man.png'} alt="Аскар" className="w-[650px]" width={600} height={1000} />
                 </div>
                 <div>
                     <div className='sm:block md:hidden flex justify-center items-center z-0 rounded-full overflow-hidden' style={{

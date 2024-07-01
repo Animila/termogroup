@@ -9,7 +9,6 @@ export const Projects = () => {
             images: [
                 '/images/projects/1_1.jpg',
                 '/images/projects/1_2.jpg',
-                '/images/projects/1_3.jpg'
             ],
             type: {
                 sm: 2,
@@ -20,8 +19,7 @@ export const Projects = () => {
         {
             images: [
                 '/images/projects/2_1.jpg',
-                '/images/projects/2_2.jpg',
-                '/images/projects/2_3.jpg'
+                '/images/projects/2_2.jpg'
             ],
             type: {
                 sm: 3,
@@ -32,8 +30,7 @@ export const Projects = () => {
         {
             images: [
                 '/images/projects/3_1.jpg',
-                '/images/projects/3_2.jpg',
-                '/images/projects/3_3.jpg'
+                '/images/projects/3_2.jpg'
             ],
             type: {
                 sm: 3,
@@ -65,9 +62,19 @@ export const Projects = () => {
                 {projectsList.map((item, index) => {
                     const [ref, isInView] = useInView({ threshold: 0.1 });
                     const [currentImageIndex, setCurrentImageIndex] = useState(0);
+                    const [isClickedBack, setIsClickedBack] = useState(false);
+                    const [isClickedNext, setIsClickedNext] = useState(false);
 
-                    const handleImageToggle = () => {
-                        setCurrentImageIndex((prevIndex) => (prevIndex + 1) % item.images.length);
+                    const handleImageToggle = (item) => {
+                        setCurrentImageIndex(item);
+                        if(item === 0) {
+                            setIsClickedBack(true);
+                            setTimeout(() => setIsClickedBack(false), 500); // Reset after animation
+                        } else {
+                            setIsClickedNext(true);
+                            setTimeout(() => setIsClickedNext(false), 500); // Reset after animation
+
+                        }
                     };
 
                     return (
@@ -83,10 +90,32 @@ export const Projects = () => {
                             className='sm:col-span-1 md:col-span-4 bg-white shadow-lg rounded-lg overflow-hidden'
                         >
                             <div className='relative w-full h-[200px]'>
+                                <motion.div
+                                    key={currentImageIndex}
+                                    initial={{ opacity: 0 }}
+                                    animate={{ opacity: 1 }}
+                                    exit={{ opacity: 0 }}
+                                    transition={{ duration: 0.5 }}
+                                    className='absolute w-full h-full'
+                                >
                                 <Image src={item.images[currentImageIndex]} alt={`Project image ${index + 1}`} fill style={{objectFit:"cover"}} />
-                                <button onClick={handleImageToggle} className="absolute bottom-4 left-4 bg-gray-700 text-white px-2 py-1 rounded bg-main_one">
-                                    До/После
-                                </button>
+                                </motion.div>
+                                <motion.button
+                                    onClick={() => handleImageToggle(0)}
+                                    className={`absolute bottom-4 left-4 text-white px-[20px] py-[5px] rounded`}
+                                    animate={isClickedBack ? { scale: 1.1, backgroundColor: "#F22F05" } : { scale: 1, backgroundColor: "#F07100" }}
+                                    transition={{ duration: 0.3 }}
+                                >
+                                    До
+                                </motion.button>
+                                <motion.button
+                                    onClick={() =>  handleImageToggle(1)}
+                                    className={`absolute bottom-4 right-4 text-white px-[20px] py-[5px] rounded`}
+                                    animate={isClickedNext ? { scale: 1.1, backgroundColor: "#F22F05" } : { scale: 1, backgroundColor: "#F07100" }}
+                                    transition={{ duration: 0.3 }}
+                                >
+                                    После
+                                </motion.button>
                             </div>
                             <div className='p-4'>
                                 <div className='text-[12px] font-bold '>Утепление</div>

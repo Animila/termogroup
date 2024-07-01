@@ -5,7 +5,7 @@ export const RightInfo = () => {
     <div className="mb-4 relative z-[1]">
       <div className='flex justify-center items-center z-0'>
         <Image
-            src="/images/managerCircle.png" // Путь к вашему изображению
+            src="/images/man_mini.jpg" // Путь к вашему изображению
             alt="Ернур"
             width={220}
             height={220}
@@ -13,7 +13,7 @@ export const RightInfo = () => {
         />
       </div>
       <div className="text-center bg-[#333438] relative rounded-[16px] px-[50px] py-[15px] text-white mt-[-40px] z-10 inset-0">
-        <div className="text-lg font-bold">Ернур</div>
+        <div className="text-lg font-bold">Асқар</div>
         <div className="text-sm">Менеджер компании</div>
         <div className="text-sm">TermoGroup</div>
       </div>

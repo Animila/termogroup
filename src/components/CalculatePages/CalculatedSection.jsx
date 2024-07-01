@@ -6,8 +6,6 @@ import { RightInfo } from "@/components/CalculatePages/RightInfo";
 import { ProgressBar } from "@/components/CalculatePages/ProgressBar";
 import { TwoPageCalculate } from "@/components/CalculatePages/Steps/Two";
 import { ThreePageCalculate } from "@/components/CalculatePages/Steps/Three";
-import { FourPageCalculate } from "@/components/CalculatePages/Steps/Four";
-import { FivePageCalculate } from "@/components/CalculatePages/Steps/Five";
 import { EndPageCalculate } from "@/components/CalculatePages/Steps/End";
 import { useInView } from "@/hooks/useInView";
 
@@ -17,6 +15,7 @@ export const CalculatedSection = () => {
     const [ref, isInView] = useInView({ threshold: 0.1 });
     const [isLoading, setIsLoading] = useState(false);
     const [isSubmitted, setIsSubmitted] = useState(false);
+
 
     const onSubmit = async (data) => {
         setIsLoading(true);
@@ -73,8 +72,9 @@ export const CalculatedSection = () => {
                     hidden: { opacity: 0, y: 50 },
                     visible: { opacity: 1, y: 0, transition: { duration: 0.5 } }
                 }}
+                id={'#calcu'}
             >
-                <div className="sm:w-full md:w-[890px]">
+                <div className="sm:w-full md:w-[890px]" >
                     <h2 className="sm:text-[20px] md:text-[53px] sm:leading-[23px] md:leading-[56px] text-black">
                         Спасибо за ваши ответы! Ваша заявка уже обрабатывается!
                     </h2>

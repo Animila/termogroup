@@ -9,7 +9,6 @@ import {Projects} from "@/components/Projects";
 import {SpecialOffers} from "@/components/Offers";
 import {Faq} from "@/components/Faq";
 import {Contacts} from "@/components/Contacts";
-import {useState} from "react";
 import {SubmitManager} from "@/components/Modals/SubmitManager";
 import {useModal} from "@/contexts/ModalContext";
 import {OfficeModal} from "@/components/Modals/OfficeView";

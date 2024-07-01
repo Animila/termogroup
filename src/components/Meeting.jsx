@@ -19,7 +19,7 @@ export const Meeting = () => {
             className="bg-white lg:px-[5vw] 2xl:px-[15vw] sm:py-[20px] sm:px-[10px] md:pt-[78px] sm:pt-[20px]"
         >
             <div className="w-full bg-white md:min-h-[500px] sm:py-[20px] md:grid md:grid-cols-12 sm:flex sm:flex-col-reverse sm:justify-between">
-                <div className="w-full sm:px-[10px] md:pl-[72px] sm:pt-[10px] md:pt-[45px] md:block sm:flex sm:items-center sm:flex-col md:col-span-7 span">
+                <div className="w-full sm:px-[10px] md:pl-[72px] sm:pt-[10px] md:pt-0 md:block sm:flex sm:items-center sm:flex-col md:col-span-7 span">
                     <h3 className="text-main_one sm:text-[20px] md:text-[60px] leading-[100%] font-black md:tracking-[-1px] w-full ">
                         Ознакомьтесь лично
                     </h3>
@@ -33,7 +33,7 @@ export const Meeting = () => {
                         У нас в офисе или на объекте вы сможете вживую оценить все фактуры и убедиться в качестве панелей.
                     </p>
                     <button
-                        className="md:mt-[50px] sm:mt-[20px] bg-main_one md:h-[55px] md:w-[300px] flex justify-center items-center rounded-[70px] text-white font-semibold sm:text-[14px] md:text-[15px] leading-[19px] sm:py-[8px] sm:px-[50px] md:p-0"
+                        className="md:mt-[50px] mx-auto sm:mt-[20px] bg-main_one md:h-[55px] md:w-[300px] flex justify-center items-center rounded-[70px] text-white font-semibold sm:text-[14px] md:text-[15px] leading-[19px] sm:py-[8px] sm:px-[50px] md:p-0"
                         onClick={() => {
                             changeActiveOffice();
                         }}

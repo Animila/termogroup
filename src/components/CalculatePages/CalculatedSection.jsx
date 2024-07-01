@@ -66,7 +66,7 @@ export const CalculatedSection = () => {
         return (
             <motion.section
                 ref={ref}
-                className="flex sm:pb-[50px] md:min-h-[800px] sm:px-[10px] md:px-[15vw] sm:pt-[20px] md:pt-[50px] bg-gray_dark gap-[20px] justify-between relative"
+                className="flex sm:pb-[50px] md:min-h-[800px] sm:px-[10px] md:px-[15vw] sm:pt-[20px] md:pt-[50px] bg-white gap-[20px] justify-between relative"
                 initial="hidden"
                 animate={isInView ? "visible" : "hidden"}
                 variants={{
@@ -75,7 +75,7 @@ export const CalculatedSection = () => {
                 }}
             >
                 <div className="sm:w-full md:w-[890px]">
-                    <h2 className="sm:text-[20px] md:text-[53px] sm:leading-[23px] md:leading-[56px] text-white">
+                    <h2 className="sm:text-[20px] md:text-[53px] sm:leading-[23px] md:leading-[56px] text-black">
                         Спасибо за ваши ответы! Ваша заявка уже обрабатывается!
                     </h2>
                 </div>
@@ -86,7 +86,7 @@ export const CalculatedSection = () => {
   return (
       <motion.section
           ref={ref}
-          className="flex sm:pb-[50px] md:min-h-[800px] sm:px-[10px] lg:px-[5vw] 2xl:px-[15vw] sm:pt-[20px] md:pt-[50px] bg-gray_dark gap-[20px] justify-between relative"
+          className="flex sm:pb-[50px] md:min-h-[800px] sm:px-[10px] lg:px-[5vw] 2xl:px-[15vw] sm:pt-[20px] md:pt-[50px] bg-white gap-[20px] justify-between relative"
           initial="hidden"
           animate={isInView ? "visible" : "hidden"}
           variants={{
@@ -95,9 +95,9 @@ export const CalculatedSection = () => {
           }}
       >
         <div className="sm:w-full md:w-[890px]">
-          <h2 className="sm:text-[24px] md:text-[53px] font-bold sm:text-center sm:leading-[100%] md:leading-[56px] text-white">
-            Ответьте на 3 вопросов и получите
-            <span className="text-main_one"> расчет + скидку 5%</span>
+          <h2 className="sm:text-[24px] md:text-[53px] font-bold sm:text-center sm:leading-[100%] md:leading-[56px] text-black">
+              Ответьте на 3 вопроса и получите
+              <span className="text-main_one"> расчет + скидку 5%</span>
           </h2>
           <ProgressBar step={step} />
           <form onSubmit={handleSubmit(onSubmit)}>

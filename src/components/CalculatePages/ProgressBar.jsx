@@ -25,10 +25,10 @@ export const ProgressBar = ({step}) => {
             <li className="flex bg-main_one sm:w-[20px] sm:h-[20px] md:w-[40px] md:h-[40px] items-center justify-center rounded-3xl z-10">
                 <span className="sm:hidden md:block">1</span>
             </li>
-            <li className={`flex ${step >= 2 ? `bg-main_one text-white` : 'bg-gray text-accent_one'} sm:w-[20px] sm:h-[20px] md:w-[40px] md:h-[40px] items-center justify-center rounded-3xl z-10`}>
+            <li className={`flex ${step >= 2 ? `bg-main_one text-white` : 'bg-gray text-white'} sm:w-[20px] sm:h-[20px] md:w-[40px] md:h-[40px] items-center justify-center rounded-3xl z-10`}>
                 <span className="sm:hidden md:block">2</span>
             </li>
-            <li className={`flex ${step >= 3 ? `bg-main_one text-white` : 'bg-gray text-accent_one'} sm:w-[20px] sm:h-[20px] md:w-[40px] md:h-[40px] items-center justify-center rounded-3xl z-10`}>
+            <li className={`flex ${step >= 3 ? `bg-main_one text-white` : 'bg-gray text-white'} sm:w-[20px] sm:h-[20px] md:w-[40px] md:h-[40px] items-center justify-center rounded-3xl z-10`}>
                 <span className="sm:hidden md:block">3</span>
             </li>
             {/*<li className={`flex ${step >= 4 ? `bg-main_one text-white` : 'bg-gray text-accent_one'} sm:w-[20px] sm:h-[20px] md:w-[40px] md:h-[40px] items-center justify-center rounded-3xl z-10`}>*/}
@@ -37,7 +37,7 @@ export const ProgressBar = ({step}) => {
             {/*<li className={`flex ${step >= 5 ? `bg-main_one text-white` : 'bg-gray text-accent_one'} sm:w-[20px] sm:h-[20px] md:w-[40px] md:h-[40px] items-center justify-center rounded-3xl z-10`}>*/}
             {/*    <span className="sm:hidden md:block">5</span>*/}
             {/*</li>*/}
-            <li className={`flex ${step >= 4 ? `bg-main_one text-white` : 'bg-gray text-accent_one'} sm:h-30px px-[26px] md:h-[40px] items-center justify-center rounded-3xl z-10`}>
+            <li className={`flex ${step >= 4 ? `bg-main_one text-white` : 'bg-gray text-white'} sm:h-30px px-[26px] md:h-[40px] items-center justify-center rounded-3xl z-10`}>
                     <span className="sm:hidden md:block md:mr-[5px]">
                        Расчет +
                     </span>

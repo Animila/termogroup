@@ -19,9 +19,9 @@ export const ThreePageCalculate = ({setStep, register, watch}) => {
       }}
   >
       <div className="flex flex-col sm:gap-[16px] md:gap-[20px]">
-          <p className="text-white sm:text-[18px] font-bold md:text-[25px] md:leading-[32px]">Размеры дома?</p>
-          <span className="text-white sm:text-[14px] font-semibold md:text-[17px] md:leading-[18px]">Введите размеры в кв. м.</span>
-          <input className="text-[14px] leading-[17px] w-full text-white h-[60px] rounded-[10px] border-[1px] border-gray bg-transparent px-[20px]"
+          <p className="text-black sm:text-[18px] font-bold md:text-[25px] md:leading-[32px]">Размеры дома?</p>
+          <span className="text-black sm:text-[14px] font-semibold md:text-[17px] md:leading-[18px]">Введите размеры в кв. м.</span>
+          <input className="text-[14px] leading-[17px] w-full text-black h-[60px] rounded-[10px] border-[1px] border-gray bg-transparent px-[20px]"
                  placeholder="Написать в кв. м." type={"number"} {...register("size")} />
       </div>
       <div className="flex flex-row md:gap-[20px] self-end">
@@ -40,7 +40,7 @@ export const ThreePageCalculate = ({setStep, register, watch}) => {
                       e.preventDefault()
                       setStep(prev => prev + 1)
                   }}>
-              <span className="sm:text-[12px] md:text-[20px] leading-[24px]">Далее</span>
+              <span className={`sm:text-[12px] md:text-[20px] leading-[24px] ${active ? 'text-white' : 'text-[#747F80]'}`}>Далее</span>
               <NextSVG color={active ? 'white' : '#747F80'}/>
           </button>
       </div>

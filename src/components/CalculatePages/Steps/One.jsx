@@ -24,16 +24,16 @@ const OnePageCalculate = ({ setStep, register, watch }) => {
             }}
         >
             <div className="flex flex-col sm:gap-[16px] md:gap-[20px]">
-                <p className="text-white sm:text-[18px] font-bold md:text-[25px] md:leading-[32px]">В каком городе вы находитесь?</p>
-                <span className="text-white sm:text-[14px] font-semibold md:text-[17px] md:leading-[18px]">Введите населенный пункт</span>
-                <input className="text-[14px] leading-[17px] w-full text-white h-[60px] rounded-[10px] border-[1px] border-gray bg-transparent px-[20px]" placeholder="Населенный пункт" {...register("city")} />
+                <p className="text-black sm:text-[18px] font-bold md:text-[25px] md:leading-[32px]">В каком городе вы находитесь?</p>
+                <span className="text-black sm:text-[14px] font-semibold md:text-[17px] md:leading-[18px]">Введите населенный пункт</span>
+                <input className="text-[14px] leading-[17px] w-full text-black h-[60px] rounded-[10px] border-[1px] border-gray bg-transparent px-[20px]" placeholder="Населенный пункт" {...register("city")} />
             </div>
-            <button disabled={!active} className="disabled:text-accent_one disabled:bg-gray text-white bg-main_one sm:px-[28px] sm:h-[30px] md:w-[170px] md:h-[50px] flex justify-center items-center gap-[15px] self-end rounded-3xl"
+            <button disabled={!active} className="disabled:text-accent_one disabled:bg-gray text-black bg-main_one sm:px-[28px] sm:h-[30px] md:w-[170px] md:h-[50px] flex justify-center items-center gap-[15px] self-end rounded-3xl"
                     onClick={(e) => {
                         e.preventDefault();
                         setStep(prev => prev + 1);
                     }}>
-                <span className="sm:text-[12px] md:text-[20px] leading-[24px]">Далее</span>
+                <span className={`sm:text-[12px] md:text-[20px] leading-[24px] ${active ? 'text-white' : 'text-[#747F80]'}`}>Далее</span>
                 <NextSVG color={active ? 'white' : '#747F80'} />
             </button>
         </motion.div>

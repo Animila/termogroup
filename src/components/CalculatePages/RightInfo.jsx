@@ -1,7 +1,7 @@
 import Image from "next/image";
 
 export const RightInfo = () => {
-  return <div className="flex flex-col items-center text-white relative">
+  return <div className="flex flex-col items-center text-black relative">
     <div className="mb-4 relative z-[1]">
       <div className='flex justify-center items-center z-0'>
         <Image

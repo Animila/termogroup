@@ -25,7 +25,7 @@ export const EndPageCalculate = ({setStep, register, watch, setValue, isLoading}
       }}
   >
 
-      <div className="text-white sm:text-[18px] font-bold md:text-[25px] md:leading-[32px]">Как вам удобнее получить расчет и скидку?
+      <div className="text-black sm:text-[18px] font-bold md:text-[25px] md:leading-[32px]">Как вам удобнее получить расчет и скидку?
       </div>
       <div className="sm:w-full md:w-[650px]">
         <div className="flex w-full flex-row sm:mt-[15px] md:mt-[30px]">
@@ -57,19 +57,19 @@ export const EndPageCalculate = ({setStep, register, watch, setValue, isLoading}
         <div className="mt-[30px]">
           <div className="flex border-gray border-[1px]">
             <label htmlFor="name" className="flex justify-center items-center px-[31px] py-[24px] md:w-[78px]">
-              <PeopleSVG/>
+              <PeopleSVG color={'black'}/>
             </label>
-            <input id={"name"} type="text" className="text-[14px] leading-[17px] w-full text-white bg-transparent outline-0"
+            <input id={"name"} type="text" className="text-[14px] leading-[17px] w-full text-black bg-transparent outline-0"
                    placeholder="Как к вам обращаться?"
                    {...register('name')}
             />
           </div>
           <div className="flex border-gray border-[1px]">
             <label htmlFor="phone" className="flex justify-center items-center px-[31px] py-[24px] md:w-[78px]">
-              <PhoneSVG color={"white"}/>
+              <PhoneSVG color={"black"}/>
             </label>
             <InputMask id={"phone"} placeholder="Введите свой номер телефона" {...register('phone')}
-                       className="text-[14px] leading-[17px] w-full text-white bg-transparent outline-0" mask="+7(999)999-99-99"
+                       className="text-[14px] leading-[17px] w-full text-black bg-transparent outline-0" mask="+7(999)999-99-99"
                        maskChar=" "/>;
           </div>
         </div>

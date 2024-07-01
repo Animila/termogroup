@@ -72,8 +72,8 @@ export const Constructor = () => {
   const [ref2, isInView2] = useInView({ threshold: 0.1 });
 
   return (
-      <div className="bg-light_black sm:pt-[50px] md:pt-[84px] lg:px-[5vw] 2xl:px-[15vw] xl:pt-[84px] sm:pb-[20px] md:pb-[100px] sm:px-[10px]">
-        <h2 className="md:font-bold sm:text-[27px] sm:leading-[100%] font-bold md:text-[64px] md:leading-[66px] text-center text-white">
+      <div className="bg-white sm:pt-[50px] md:pt-[84px] lg:px-[5vw] 2xl:px-[15vw] xl:pt-[84px] sm:pb-[20px] md:pb-[100px] sm:px-[10px]">
+        <h2 className="md:font-bold sm:text-[27px] sm:leading-[100%] font-bold md:text-[64px] md:leading-[66px] text-center text-black">
           Простая и надежная
           <br />
           <span className="text-main_one">конструкция на ваш выбор</span>
@@ -125,7 +125,7 @@ export const Constructor = () => {
               </button>
             </div>
           </div>
-          <div className="text-white sm:gap-[20px] sm:grid sm:grid-cols-3 md:flex md:flex-col sm:items-center md:items-start">
+          <div className="text-black sm:gap-[20px] sm:grid sm:grid-cols-3 md:flex md:flex-col sm:items-center md:items-start">
             <Image src="/images/constructorLayer1.png" alt="пример" width={135} height={110} objectFit className='w-[135px]' />
            <div className="sm:col-span-2">
              <h3 className="md:mt-[36px] md:text-[29px] md:leading-[35px] sm:text-[16px] sm:font-bold">Декоративный слой</h3>
@@ -179,7 +179,7 @@ export const Constructor = () => {
               </button>
             </div>
           </div>
-          <div className="text-white sm:gap-[20px] sm:grid sm:grid-cols-3 md:flex md:flex-col sm:items-center md:items-start">
+          <div className="text-black sm:gap-[20px] sm:grid sm:grid-cols-3 md:flex md:flex-col sm:items-center md:items-start">
             <Image src="/images/constructorLayer2.png" alt="пример" width={135} height={110} objectFit className='w-[135px]' />
             <div className="sm:col-span-2">
               <h3 className="md:mt-[36px] md:text-[29px] md:leading-[35px] sm:text-[16px] sm:font-bold">Слой фактуры</h3>

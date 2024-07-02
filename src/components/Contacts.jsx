@@ -86,7 +86,7 @@ export const Contacts = () => {
                         textAlign: '-webkit-center'
                     }}>
                         <Image
-                            src="/images/managerCircle.png" // Путь к вашему изображению
+                            src="/images/man_mini.jpg" // Путь к вашему изображению
                             alt="Ернур"
                             width={220}
                             height={220}

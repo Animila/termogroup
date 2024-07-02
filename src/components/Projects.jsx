@@ -2,6 +2,7 @@ import Image from "next/image";
 import { motion } from "framer-motion";
 import { useInView } from "@/hooks/useInView";
 import { useState } from "react";
+import Contacts from "@/components/Contacts";
 
 export const Projects = () => {
     const projectsList = [
@@ -132,3 +133,5 @@ export const Projects = () => {
         </div>
     );
 };
+
+export default Projects

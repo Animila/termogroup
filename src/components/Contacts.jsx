@@ -7,7 +7,7 @@ import { useForm } from "react-hook-form";
 import { motion } from "framer-motion";
 import { useInView } from "@/hooks/useInView";
 
-export const Contacts = () => {
+const Contacts = () => {
     const {
         register,
         handleSubmit,
@@ -186,3 +186,5 @@ export const Contacts = () => {
         </motion.div>
     );
 };
+
+export default Contacts

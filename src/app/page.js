@@ -13,9 +13,14 @@ import {SubmitManager} from "@/components/Modals/SubmitManager";
 import {useModal} from "@/contexts/ModalContext";
 import {OfficeModal} from "@/components/Modals/OfficeView";
 import {Video} from "@/components/Video";
+import dynamic from "next/dynamic";
 
 export default function Home() {
     const {activePhone, activeVideo, activeOffice } = useModal()
+
+    const Projects = dynamic(() => import('../components/Projects'), { ssr: false });
+    const Contacts = dynamic(() => import('../components/Contacts'), { ssr: false });
+
     return (
         <>
             {activeVideo && <InformationVideo />}

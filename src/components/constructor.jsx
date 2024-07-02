@@ -126,7 +126,7 @@ export const Constructor = () => {
             </div>
           </div>
           <div className="text-black sm:gap-[20px] sm:grid sm:grid-cols-3 md:flex md:flex-col sm:items-center md:items-start">
-            <Image src="/images/constructorLayer1.png" alt="пример" width={135} height={110} objectFit className='w-[135px]' />
+            <Image src="/images/constructorLayer1.png" alt="пример" width={135} height={110} style={{objectFit:"cover"}} className='w-[135px]' />
            <div className="sm:col-span-2">
              <h3 className="md:mt-[36px] md:text-[29px] md:leading-[35px] sm:text-[16px] sm:font-bold">Декоративный слой</h3>
              <p className="sm:mt-[10px] md:mt-[23px] sm:text-[10px] md:text-[19px] sm:leading-[12px] md:leading-[24px] font-semibold text-accent_one md:text-start">
@@ -180,7 +180,7 @@ export const Constructor = () => {
             </div>
           </div>
           <div className="text-black sm:gap-[20px] sm:grid sm:grid-cols-3 md:flex md:flex-col sm:items-center md:items-start">
-            <Image src="/images/constructorLayer2.png" alt="пример" width={135} height={110} objectFit className='w-[135px]' />
+            <Image src="/images/constructorLayer2.png" alt="пример" width={135} height={110} style={{objectFit:"cover"}} className='w-[135px]' />
             <div className="sm:col-span-2">
               <h3 className="md:mt-[36px] md:text-[29px] md:leading-[35px] sm:text-[16px] sm:font-bold">Слой фактуры</h3>
               <p className="sm:mt-[10px] md:mt-[23px] sm:text-[10px] md:text-[19px] sm:leading-[12px] md:leading-[24px] font-semibold text-accent_one md:text-start">

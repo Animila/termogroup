@@ -85,7 +85,7 @@ export const HeaderSection = () => {
               animate="visible"
               variants={textVariants}
               viewport={{ once: true }}
-              className="sm:mt-[20px] md:mt-[70px] z-10"
+              className="sm:mt-[30px] md:mt-[70px] z-10"
           >
 
               <button className="sm:px-[25px] sm:py-[15px] md:w-[318px] md:h-[70px] flex justify-center sm:mx-auto items-center gap-[10px] bg-main_one rounded-[70px]">

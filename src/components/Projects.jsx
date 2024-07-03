@@ -13,7 +13,7 @@ export const Projects = () => {
             ],
             type: {
                 sm: 2,
-                price: '3800 тенге'
+                price: '4200 тенге'
             },
             price: '604200 тенге'
         },
@@ -24,7 +24,7 @@ export const Projects = () => {
             ],
             type: {
                 sm: 3,
-                price: '4600 тенге'
+                price: '4900 тенге'
             },
             price: '630200 тенге'
         },
@@ -35,7 +35,7 @@ export const Projects = () => {
             ],
             type: {
                 sm: 3,
-                price: '4600 тенге'
+                price: '5100 тенге'
             },
             price: '731400 тенге'
         }
@@ -120,7 +120,7 @@ export const Projects = () => {
                             </div>
                             <div className='p-4'>
                                 <div className='text-[12px] font-bold '>Утепление</div>
-                                <div className='text-[16px] font-bold '>{item.type.sm} см²</div>
+                                <div className='text-[16px] font-bold '>{item.type.sm} см</div>
                                 <div className='text-[12px] font-bold mt-2'>Цена за м²</div>
                                 <div className='text-[16px] font-bold'>{item.type.price}</div>
                                 <div className='text-[12px] font-bold mt-4'>Итоговая цена</div>

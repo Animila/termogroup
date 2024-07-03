@@ -96,8 +96,8 @@ export const CalculatedSection = () => {
       >
         <div className="sm:w-full md:w-[890px]">
           <h2 className="sm:text-[24px] md:text-[53px] font-bold sm:text-center sm:leading-[100%] md:leading-[56px] text-black">
-              Ответьте на 3 вопроса и получите
-              <span className="text-main_one"> расчет + скидку 5%</span>
+              Ответьте на 3 вопроса
+              <span className="text-main_one">и получите расчет</span>
           </h2>
           <ProgressBar step={step} />
           <form onSubmit={handleSubmit(onSubmit)}>

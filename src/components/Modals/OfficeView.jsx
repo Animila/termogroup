@@ -37,7 +37,7 @@ export const OfficeModal = () => {
                     <OfficeForm changeActiveOffice={changeActiveOffice}/>
                 </div>
                 <div className="p-4 sm:hidden md:block">
-                    <Image src="/images/manager.png" alt="Manager" width={200} height={200}/>
+                    <Image src="/images/man_mini.jpg" alt="Manager" width={200} height={200}/>
                 </div>
             </div>
         </div>

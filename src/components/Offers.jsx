@@ -61,7 +61,7 @@ export const SpecialOffers = () => {
                     и акции на фасадные панели TermoGroup
                 </p>
             </div>
-            <div className='grid sm:grid-cols-1 md:grid-cols-12 gap-4'>
+            <div className='flex justify-center '>
                 {offers.map((offer, index) => (
                     <OfferItem key={index} offer={offer} index={index} />
                 ))}

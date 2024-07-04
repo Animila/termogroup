@@ -14,23 +14,22 @@ const OfficeForm = ({changeActiveOffice}) => {
     const onSubmit = async (data) => {
         setIsLoading(true);
         try {
-            const response = await fetch('https://amoconnect.ru/amo-kazfibrapfz/api/slug/phone_manager', {
+            const response = await fetch('/api/send-email', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json'
                 },
                 body: JSON.stringify({
-                    "url": "https://termogroup.kz",
-                    "phone": data.phone,
-                    "lead_name": "заказ с сайта (просмотр фактур)",
-                    "contact_tags": {
-                        "836831": 'telephone'
-                    },
-                    "contact_fields": {
-                        "836831": 'telephone',
-                        "66503": true
-                    },
-                    "lead_comment": `Сообщение: ${data.message}\nДата и время: ${new Date('2024-06-12T10:00').toLocaleDateString() + ' ' + new Date('2024-06-12T10:00').toLocaleTimeString()}`
+                    "html": `
+                            <p>С сайта: https://termogroup.kz</p>
+                            <h2>Контакт:</h2>
+                            <p>Телефон: ${data.phone}</p>
+                            <p>Как связаться: telephone</p>
+                            <h2>Заявка:</h2>
+                            <p>Сообщение: ${data.message}</p>
+                            <p>Дата и время: ${new Date('2024-06-12T10:00').toLocaleDateString() + ' ' + new Date('2024-06-12T10:00').toLocaleTimeString()}</p>
+                            `,
+                    "title": "заказ с сайта (просмотр фактур)",
                 })
             });
 

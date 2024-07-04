@@ -31,23 +31,21 @@ const Contacts = () => {
         setIsLoading(true);
         try {
             console.log('3456 ', data)
-            const response = await fetch('https://amoconnect.ru/amo-kazfibrapfz/api/slug/phone_manager', {
+            const response = await fetch('/api/send-email', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json'
                 },
                 body: JSON.stringify({
-                    "url": "https://termogroup.kz",
-                    "phone": data.phone,
-                    "lead_name": "заказ с сайта (звонок)",
-                    "contact_tags": {
-                        "836831": 'telephone'
-                    },
-                    "contact_fields": {
-                        "836831": 'telephone',
-                        "66503": true
-                    },
-                    "lead_comment": data.text
+                    "html": `
+                            <p>С сайта: https://termogroup.kz</p>
+                            <h2>Контакт:</h2>
+                            <p>Телефон: ${data.phone}</p>
+                            <p>Как связаться: telephone</p>
+                            <h2>Заявка:</h2>
+                            <p>Комментарий: ${data.text}</p>
+                            `,
+                    "title": "заказ с сайта (звонок)",
                 })
             });
 

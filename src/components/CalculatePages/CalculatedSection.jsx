@@ -21,29 +21,25 @@ export const CalculatedSection = () => {
         setIsLoading(true);
         try {
             console.log('23456 ', data )
-            const response = await fetch('https://amoconnect.ru/amo-kazfibrapfz/api/slug/calculation', {
+            const response = await fetch('/api/send-email', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json'
                 },
                 body: JSON.stringify({
-                    "url": "https://termogroup.kz",
-                    "phone": data.phone,
-                    "name": data.name,
-                    "lead_name": "заявка с сайта",
-                    "lead_fields": {
-                        "66749": ['алматы', 'астана', 'семей', 'атырау', 'павлодар', 'караганда', 'усть-каменогорск', 'актобе', 'уральск', 'тараз', 'кызылорда', 'талдыкорган'].includes(data.city.toLowerCase().trim()) ? data.city : undefined,
-                        "353873": data.size,
-                        "836825": data.width
-                    },
-                    "contact_tags": {
-                        "836831": data.social
-                    },
-                    "contact_fields": {
-                        "836831": data.social,
-                        "66503": true
-                    },
-                    "lead_comment": `Город: ${data.city}`
+                    "html": `
+                            <p>С сайта: https://termogroup.kz</p>
+                            <h2>Контакт:</h2>
+                            <p>Телефон: ${data.phone}</p>
+                            <p>Имя: ${data.name}</p>
+                            <p>Как связаться: ${data.social}</p>
+                            <h2>Заявка:</h2>
+                            <p>Город: ${data.city.toLowerCase().trim()}</p>
+                            <p>Толщина: ${data.size}</p>
+                            <p>Размеры дома: ${data.width}</p>
+                            <p>Толщина: ${data.size}</p>
+                            `,
+                    "title": "заявка с сайта",
                 })
             });
 
